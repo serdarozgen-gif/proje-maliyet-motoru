@@ -18,18 +18,17 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { createRequire } from 'node:module';
 
-const JSZIP_MODUL =
-  'D:/Atlasgrid/tedaş şartnameler/tedas_asistan_prototip/node_modules/jszip/lib/index.js';
+const require = createRequire(import.meta.url);
+const JSZip = require('jszip');
 
 const KAYNAK =
   process.argv[2] ||
-  'D:/Atlasgrid/tedaş şartnameler/5 2026 Yılı TEDAŞ BFK.xlsx';
+  path.join(import.meta.dirname, '..', 'data', '5 2026 Yılı TEDAŞ BFK.xlsx');
 const CIKTI =
   process.argv[3] ||
   path.join(import.meta.dirname, '..', 'data', 'tedas_bfk_2026.json');
-
-const JSZip = (await import(pathToFileURL(JSZIP_MODUL).href)).default;
 
 // ---------------------------------------------------------------- okuma
 const zip = await JSZip.loadAsync(fs.readFileSync(KAYNAK));
