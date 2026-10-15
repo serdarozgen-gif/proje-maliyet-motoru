@@ -25,7 +25,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
-          cache: 'npm'
 
       # --- Cache node_modules (not needed for this project, but kept for future) ---
       # - name: Cache node_modules
