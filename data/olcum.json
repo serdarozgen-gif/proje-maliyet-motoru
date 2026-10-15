@@ -1,0 +1,547 @@
+{
+  "_aciklama": "OLCUM DOSYASI. Sahadan/tekliften gelen GERCEK fiyat ve tutarlar. Kalibrasyon bu dosyadan okur. Her satirin kaynagi vardir; kaynaksiz satir kalibrasyona girmez.",
+  "surum": "0.1.0",
+  "olcumler": [
+    {
+      "vaka": "Ozcam 100kVA trafo baglantisi",
+      "tarih": "2026-08-28 .. 2026-09-22",
+      "kaynak": "TEKLIF_SABLONU_v2026_TEDAS3.xlsx / PIYASA_FIYAT_OZCAM sayfasi + gerceklesen faturalar",
+      "kalemler": [
+        {
+          "poz": "85.610.1103",
+          "ad": "100 kVA trafo (AL sargili)",
+          "birim": "Ad",
+          "bfkMalzeme": 259260.384,
+          "teklifREMA": 160580.25,
+          "elNotu": 175000,
+          "elsan": 225000,
+          "gerceklesen": null,
+          "not": "Trafo BETA 3335 USD. REMA %38 altinda. Sargi/sertifika + garanti teyit gerekli."
+        },
+        {
+          "poz": "85.203.1101",
+          "ad": "Bakir bara Q8",
+          "birim": "KG",
+          "miktar": 15,
+          "bfkMalzeme": 916.85,
+          "teklifREMA": 880,
+          "elNotu": 900,
+          "elsan": 1285,
+          "not": "REMA en ucuz."
+        },
+        {
+          "poz": "85.105.1700",
+          "ad": "Galvanizli OG demir direk",
+          "birim": "KG",
+          "miktar": 1600,
+          "bfkMalzeme": 63.68,
+          "teklifREMA": 67,
+          "elNotu": 72,
+          "gerceklesen": 65,
+          "not": "GERCEKLESEN 1500 kg x 65 TL. Teklif 1600 kg idi, 1500 kg alindi."
+        },
+        {
+          "poz": "85.720.1302",
+          "ad": "RM pano (sayac + kompanzasyon)",
+          "birim": "AD",
+          "bfkMalzeme": null,
+          "gerceklesen": 136369.31,
+          "not": "Elsan 126.750 (sayac dahil). BFK karsiligi yok."
+        },
+        {
+          "poz": "85.800.1200",
+          "ad": "1x50 NYY kablo",
+          "birim": "MT",
+          "miktar": 75,
+          "bfkMalzeme": 284.33,
+          "teklifREMA": 385,
+          "elNotu": 300,
+          "elsan": 461,
+          "not": "El notu net fiyata esit. REMA liste-netten yuksek."
+        },
+        {
+          "poz": "85.800.1231",
+          "ad": "3x50+25 NYY kablo",
+          "birim": "MT",
+          "miktar": 35,
+          "bfkMalzeme": 957.62,
+          "teklifREMA": 1370,
+          "elNotu": 1400,
+          "elsan": 1450,
+          "not": "REMA en ucuz."
+        },
+        {
+          "poz": "85.211.1800",
+          "ad": "VHD-35 mesnet izolator",
+          "birim": "AD",
+          "bfkMalzeme": 1525.34,
+          "teklifREMA": 900,
+          "elNotu": 850,
+          "elsan": 1515,
+          "not": "BFK malzeme bayinin cok ustunde — BFK bu kalemde bayi fiyatini gosteriyor olabilir."
+        },
+        {
+          "poz": "85.211.1801",
+          "ad": "B-35 izolator demiri",
+          "birim": "AD",
+          "bfkMalzeme": 470.79,
+          "teklifREMA": 450,
+          "elNotu": 165,
+          "elsan": 650,
+          "not": "El notu REMA'nin 1/3'u."
+        },
+        {
+          "poz": "85.211.2601",
+          "ad": "36kV 10kA polimer parafudr",
+          "birim": "AD",
+          "bfkMalzeme": 3421.84,
+          "teklifREMA": 2000,
+          "elNotu": 2250,
+          "elsan": 6700,
+          "not": "REMA en ucuz."
+        },
+        {
+          "poz": "85.530.1000",
+          "ad": "36kV 630A H.S.T. ayirici",
+          "birim": "AD",
+          "bfkMalzeme": 35069.49,
+          "teklifREMA": 33000,
+          "elsan": 39930,
+          "not": "Elsan montajli."
+        }
+      ],
+      "toplamlar": {
+        "_aciklama": "Vakanin butun maliyeti. Kalibrasyon oranlarini bunlara karsi olcer.",
+        "remaTeklifMalzemeKDVIHaric": 463730,
+        "remaTeklifKDVIHaric": null,
+        "faturaMalzemeToplamiKDVIHaric": 511458,
+        "direkGerceklesenKDVIHaric": 97500,
+        "panoGerceklesenKDVIHaric": 136369.31,
+        "iscilikOdenenKDVIHaric": 83333.33,
+        "toplamKDVIHaric": 829267.31,
+        "toplamKDVIDahil": 892101.17,
+        "not": "Malzeme faturasinda trafo yok (ayri alindi); direk ve pano ayri kalem."
+      }
+    },
+    {
+      "vaka": "Lokal GES ENH (taseron iscilik kalibrasyonu)",
+      "tarih": "2026-09",
+      "kaynak": "TEKLIF_SABLONU_v2026_TEDAS3.xlsx / ISCILIK_LOKALGES sayfasi",
+      "kaynakNotu": "Bu sayfa MALIYET PROJEKSIYONUNDA KULLANILMAK icin hazirlanmis: 'taseron' sutunu gercek iscilik bedeli, '2026 BFK montaj' sutunu referans. Iscimizin fiil ekip maliyetidir.",
+      "kalemler": [
+        {
+          "poz": null,
+          "ad": "Santrifuj beton direk montaji",
+          "birim": "KG",
+          "miktar": 75430,
+          "gercekIscilik": 30,
+          "bfkMontaj": null
+        },
+        {
+          "poz": null,
+          "ad": "Pigeon iletken cekimi",
+          "birim": "KG",
+          "miktar": 2428,
+          "gercekIscilik": 82,
+          "gesKesif": 70,
+          "bfkMontaj": 61.97
+        },
+        {
+          "poz": null,
+          "ad": "Tek gergi takimi",
+          "birim": "AD",
+          "miktar": 93,
+          "gercekIscilik": 420,
+          "bfkMontaj": 415.04
+        },
+        {
+          "poz": null,
+          "ad": "36kV parafudr",
+          "birim": "AD",
+          "miktar": 9,
+          "gercekIscilik": 2500,
+          "bfkMontaj": 3532.42
+        },
+        {
+          "poz": null,
+          "ad": "Kompakt TIP-2H/D donanimsiz montaj",
+          "birim": "AD",
+          "miktar": 1,
+          "gercekIscilik": 80000,
+          "gesKesif": 87500,
+          "bfkMontaj": 118618.75
+        },
+        {
+          "poz": null,
+          "ad": " Yuk ayiricili giris-cikis hucre",
+          "birim": "AD",
+          "miktar": 1,
+          "gercekIscilik": 22000,
+          "gesKesif": 17500,
+          "bfkMontaj": 32709.18
+        },
+        {
+          "poz": null,
+          "ad": "Harici adi ayirici 630A",
+          "birim": "AD",
+          "miktar": 2,
+          "gercekIscilik": 20000,
+          "bfkMontaj": 12167.57
+        },
+        {
+          "poz": null,
+          "ad": "Aku-redresor 24V 26Ah",
+          "birim": "AD",
+          "miktar": 1,
+          "gercekIscilik": 7500,
+          "gesKesif": 1000,
+          "bfkMontaj": 8601.4
+        },
+        {
+          "poz": null,
+          "ad": "1x150/25 AL YG kablo cekimi",
+          "birim": "M",
+          "miktar": 1055,
+          "gercekIscilik": 120,
+          "gesKesif": 56,
+          "bfkMontaj": 119.08
+        },
+        {
+          "poz": null,
+          "ad": "Dahili baslik 1x150 AL",
+          "birim": "AD",
+          "miktar": 9,
+          "gercekIscilik": 3500,
+          "gesKesif": 2850,
+          "bfkMontaj": 993.65
+        },
+        {
+          "poz": null,
+          "ad": "Harici baslik 1x150 AL",
+          "birim": "AD",
+          "miktar": 9,
+          "gercekIscilik": 3500,
+          "gesKesif": 2850,
+          "bfkMontaj": 1263.81
+        },
+        {
+          "poz": null,
+          "ad": "Sac tava",
+          "birim": "KG",
+          "miktar": 80,
+          "gercekIscilik": 300,
+          "gesKesif": 50,
+          "bfkMontaj": 27.41
+        },
+        {
+          "poz": null,
+          "ad": "Tuvenan kablo kanali",
+          "birim": "M3",
+          "miktar": 142.5,
+          "gercekIscilik": 3600,
+          "gesKesif": 3000,
+          "bfkMontaj": 2468.22
+        },
+        {
+          "poz": null,
+          "ad": "Topraklama kazigi",
+          "birim": "AD",
+          "miktar": 85,
+          "gercekIscilik": 2000,
+          "gesKesif": 300,
+          "bfkMontaj": 1208.27
+        },
+        {
+          "poz": null,
+          "ad": "Topraklama seridi",
+          "birim": "M",
+          "miktar": 48,
+          "gercekIscilik": 300,
+          "bfkMontaj": 329.14
+        }
+      ]
+    },
+    {
+      "vaka": "Enart 100kVA direk tipi tedarikci teklifi (siparis)",
+      "tarih": "2026-10-07 (belge alim tarihi; teklif tarihi yazmiyor)",
+      "kaynak": "Enart Enerji tedarikci teklifi (kagit tarama, 26 satir). El yazisi: toplam 412.577 TL, 419.000+KDV, Sipariştir.",
+      "kaynakNotu": "Birim fiyatlar MALZEME (kullanici teyidi 2026-10-07). El yazisi 419.000 ile tablo toplami 412.577 farki (6.423 TL) bilinmiyor — şerhli, oranlara dokunulmadı. Direk tipi proje: bazi satirlar motor kapsami disi.",
+      "kalemler": [
+        {
+          "sn": 1,
+          "poz": "85.203.1101",
+          "ad": "Bakir Bara Q8",
+          "birim": "KG",
+          "miktar": 12,
+          "birimFiyat": 900,
+          "toplam": 10800,
+          "not": "Motor kapsami.",
+          "bfkMalzeme": 916.85,
+          "teklifEnart": 900
+        },
+        {
+          "sn": 2,
+          "poz": null,
+          "ad": "300X50X2 OMEGA TAVA+KAPAK+ASKI SERIDI",
+          "birim": "TK",
+          "miktar": 2,
+          "birimFiyat": 1650,
+          "toplam": 3300,
+          "not": "Kapsam disi (kablo tavasi)."
+        },
+        {
+          "sn": 3,
+          "poz": null,
+          "ad": "SWALLOW ILETKEN",
+          "birim": "KG",
+          "miktar": 10,
+          "birimFiyat": 250,
+          "toplam": 2500,
+          "not": "Kapsam disi (havai hat)."
+        },
+        {
+          "sn": 4,
+          "poz": null,
+          "ad": "VHD35 IZOLATOR",
+          "birim": "ADET",
+          "miktar": 9,
+          "birimFiyat": 850,
+          "toplam": 7650,
+          "not": "Kapsam disi (OG direk donanimi)."
+        },
+        {
+          "sn": 5,
+          "poz": null,
+          "ad": "B-35 IZOLATOR DEMIRI TEDAS",
+          "birim": "ADET",
+          "miktar": 9,
+          "birimFiyat": 165,
+          "toplam": 1485,
+          "not": "Kapsam disi (OG direk donanimi)."
+        },
+        {
+          "sn": 6,
+          "poz": null,
+          "ad": "40KN KOMPOZIT IZOLATOR",
+          "birim": "ADET",
+          "miktar": 12,
+          "birimFiyat": 320,
+          "toplam": 3840,
+          "not": "Kapsam disi (OG direk donanimi)."
+        },
+        {
+          "sn": 7,
+          "poz": null,
+          "ad": "TEK GERGI SWALLOW TEDAS",
+          "birim": "ADET",
+          "miktar": 12,
+          "birimFiyat": 365,
+          "toplam": 4380,
+          "not": "Kapsam disi (havai hat)."
+        },
+        {
+          "sn": 8,
+          "poz": null,
+          "ad": "36 KV 10KA METALOKSIT PARAFUDR+AYIRICI+FLEKS KABLO",
+          "birim": "ADET",
+          "miktar": 3,
+          "birimFiyat": 2250,
+          "toplam": 6750,
+          "not": "Kapsam disi (harici tip set). ASTOR parafudr 1450 USD ile uyumsuz; esleme yok."
+        },
+        {
+          "sn": 9,
+          "poz": null,
+          "ad": "Harici Tip Sigortali Ayirici (Sek.) 36kV 630A TEDAS",
+          "birim": "ADET",
+          "miktar": 1,
+          "birimFiyat": 34000,
+          "toplam": 34000,
+          "not": "Kapsam disi (direk tipi harici; motor bina tipi hucre fiyatlar)."
+        },
+        {
+          "sn": 10,
+          "poz": null,
+          "ad": "OG SIGORTA 61 CM 6A",
+          "birim": "ADET",
+          "miktar": 3,
+          "birimFiyat": 450,
+          "toplam": 1350,
+          "not": "Sigorta atgisi; esleme yok."
+        },
+        {
+          "sn": 11,
+          "poz": null,
+          "ad": "OLUM TEHLIKE LEVHASI",
+          "birim": "ADET",
+          "miktar": 4,
+          "birimFiyat": 26,
+          "toplam": 104,
+          "not": "Kapsam disi (levha)."
+        },
+        {
+          "sn": 12,
+          "poz": "85.800.1407-sinifi",
+          "ad": "1X50 NYY KABLO",
+          "birim": "MT",
+          "miktar": 60,
+          "birimFiyat": 360,
+          "toplam": 21600,
+          "not": "Motor kapsami (AG 1x50 NYY-Cu).",
+          "bfkMalzeme": 269.92,
+          "teklifEnart": 360
+        },
+        {
+          "sn": 13,
+          "poz": "85.790.1203",
+          "ad": "2 Mt galvanizli 65X65X7 kosebent",
+          "birim": "ADET",
+          "miktar": 5,
+          "birimFiyat": 725,
+          "toplam": 3625,
+          "not": "Motor kapsami (topraklama-kazik). BFK tanim birebir.",
+          "bfkMalzeme": 822.45,
+          "teklifEnart": 725
+        },
+        {
+          "sn": 14,
+          "poz": "85.790.1105",
+          "ad": "95 MM2 ORGULU CELIK TEL 5MT",
+          "birim": "ADET",
+          "miktar": 5,
+          "birimFiyat": 450,
+          "toplam": 2250,
+          "not": "Motor kapsami SAYIMIYLA: 1 ADET = 5 m set -> 90 TL/m. Belirsiz, teyit gerekli.",
+          "bfkMalzeme": 365.05,
+          "teklifEnart": 450
+        },
+        {
+          "sn": 15,
+          "poz": "85.630.1506",
+          "ad": "Hermetik Direk Tipi Transformator 36/0.4-0.231 kV 100 kVA (Aluminyum Sargili)",
+          "birim": "ADET",
+          "miktar": 1,
+          "birimFiyat": 168360,
+          "toplam": 168360,
+          "not": "Motor kapsami. BETA 3335 USD ile tutarli. Marka belirsiz.",
+          "bfkMalzeme": 263554.23,
+          "teklifEnart": 168360
+        },
+        {
+          "sn": 16,
+          "poz": "85.800.1482-sinifi",
+          "ad": "3X50+25 NYY KABLO",
+          "birim": "MT",
+          "miktar": 20,
+          "birimFiyat": 1300,
+          "toplam": 26000,
+          "not": "Motor kapsami (motor bedeli BFK; Oznurda bu kesit yok).",
+          "bfkMalzeme": 957.62,
+          "teklifEnart": 1300
+        },
+        {
+          "sn": 17,
+          "poz": null,
+          "ad": "3X50+25 NYY H/T BASLIK",
+          "birim": "ADET",
+          "miktar": 1,
+          "birimFiyat": 800,
+          "toplam": 800,
+          "not": "Kapsam disi (motor ayri baslik kalemi uretmiyor)."
+        },
+        {
+          "sn": 18,
+          "poz": "85.800.1481-sinifi",
+          "ad": "3X35+16 NYY KABLO",
+          "birim": "MT",
+          "miktar": 110,
+          "birimFiyat": 1010,
+          "toplam": 111100,
+          "not": "Motor kapsami (motor bedeli BFK).",
+          "bfkMalzeme": 698,
+          "teklifEnart": 1010
+        },
+        {
+          "sn": 19,
+          "poz": null,
+          "ad": "OTL ASKI SERIDI",
+          "birim": "ADET",
+          "miktar": 12,
+          "birimFiyat": 65,
+          "toplam": 780,
+          "not": "Kapsam disi (havai hat)."
+        },
+        {
+          "sn": 20,
+          "poz": null,
+          "ad": "M12X30 CIVATA+SOMUN+PUL",
+          "birim": "TK",
+          "miktar": 5,
+          "birimFiyat": 30,
+          "toplam": 150,
+          "not": "Kapsam disi (sarf)."
+        },
+        {
+          "sn": 21,
+          "poz": null,
+          "ad": "OTL ASKI SERIDI",
+          "birim": "ADET",
+          "miktar": 14,
+          "birimFiyat": 65,
+          "toplam": 910,
+          "not": "Kapsam disi (havai hat)."
+        },
+        {
+          "sn": 22,
+          "poz": null,
+          "ad": "A40-A40 KLEMENS",
+          "birim": "ADET",
+          "miktar": 9,
+          "birimFiyat": 15,
+          "toplam": 135,
+          "not": "Kapsam disi (sarf)."
+        },
+        {
+          "sn": 23,
+          "poz": null,
+          "ad": "A70-B50 KLEMENS",
+          "birim": "ADET",
+          "miktar": 6,
+          "birimFiyat": 30,
+          "toplam": 180,
+          "not": "Kapsam disi (sarf)."
+        },
+        {
+          "sn": 24,
+          "poz": null,
+          "ad": "50 LIK SKP",
+          "birim": "ADET",
+          "miktar": 12,
+          "birimFiyat": 25,
+          "toplam": 300,
+          "not": "Kapsam disi (sarf)."
+        },
+        {
+          "sn": 25,
+          "poz": null,
+          "ad": "35 LIK SKP",
+          "birim": "ADET",
+          "miktar": 6,
+          "birimFiyat": 20,
+          "toplam": 120,
+          "not": "Kapsam disi (sarf)."
+        },
+        {
+          "sn": 26,
+          "poz": null,
+          "ad": "25 LIK SKP",
+          "birim": "ADET",
+          "miktar": 6,
+          "birimFiyat": 18,
+          "toplam": 108,
+          "not": "Kapsam disi (sarf)."
+        }
+      ]
+    }
+  ]
+}

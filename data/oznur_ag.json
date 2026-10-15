@@ -1,0 +1,827 @@
+{
+ "NVV (NYM)|2x075": {
+  "kmTL": "7200",
+  "sayfa": 3,
+  "mPerTl": 7.2
+ },
+ "NVV (NYM)|2x1": {
+  "kmTL": "7200",
+  "sayfa": 3,
+  "mPerTl": 7.2
+ },
+ "NVV (NYM)|3x075": {
+  "kmTL": "6000",
+  "sayfa": 3,
+  "mPerTl": 6
+ },
+ "NVV (NYM)|3x1": {
+  "kmTL": "6000",
+  "sayfa": 3,
+  "mPerTl": 6
+ },
+ "NVV (NYM)|4x075": {
+  "kmTL": "5400",
+  "sayfa": 3,
+  "mPerTl": 5.4
+ },
+ "NVV (NYM)|4x1": {
+  "kmTL": "5400",
+  "sayfa": 3,
+  "mPerTl": 5.4
+ },
+ "NVV (NYM)|5x075": {
+  "kmTL": "5400",
+  "sayfa": 3,
+  "mPerTl": 5.4
+ },
+ "NVV (NYM)|2x16": {
+  "kmTL": "634610",
+  "sayfa": 6,
+  "mPerTl": 634.61
+ },
+ "NVV (NYM)|2x35": {
+  "kmTL": "1371000",
+  "sayfa": 6,
+  "mPerTl": 1371
+ },
+ "NVV (NYM)|3x16": {
+  "kmTL": "914200",
+  "sayfa": 6,
+  "mPerTl": 914.2
+ },
+ "NVV (NYM)|3x35": {
+  "kmTL": "1961000",
+  "sayfa": 6,
+  "mPerTl": 1961
+ },
+ "NVV (NYM)|4x16": {
+  "kmTL": "1200000",
+  "sayfa": 6,
+  "mPerTl": 1200
+ },
+ "NVV (NYM)|4x35": {
+  "kmTL": "2662000",
+  "sayfa": 6,
+  "mPerTl": 2662
+ },
+ "NVV (NYM)|5x6": {
+  "kmTL": "558130",
+  "sayfa": 6,
+  "mPerTl": 558.13
+ },
+ "NVV (NYM)|5x10": {
+  "kmTL": "974300",
+  "sayfa": 6,
+  "mPerTl": 974.3
+ },
+ "NVV (NYM)|5x16": {
+  "kmTL": "1554000",
+  "sayfa": 6,
+  "mPerTl": 1554
+ },
+ "NVV (NYM)|5x35": {
+  "kmTL": "3313000",
+  "sayfa": 6,
+  "mPerTl": 3313
+ },
+ "YVV (NYY)|2x075": {
+  "kmTL": "39070",
+  "sayfa": 7,
+  "mPerTl": 39.07
+ },
+ "YVV (NYY)|1x4": {
+  "kmTL": "90100",
+  "sayfa": 7,
+  "mPerTl": 90.1
+ },
+ "YVV (NYY)|2x1": {
+  "kmTL": "48290",
+  "sayfa": 7,
+  "mPerTl": 48.29
+ },
+ "YVV (NYY)|1x6": {
+  "kmTL": "125780",
+  "sayfa": 7,
+  "mPerTl": 125.78
+ },
+ "YVV (NYY)|1x10": {
+  "kmTL": "201680",
+  "sayfa": 7,
+  "mPerTl": 201.68
+ },
+ "YVV (NYY)|1x16": {
+  "kmTL": "308730",
+  "sayfa": 7,
+  "mPerTl": 308.73
+ },
+ "YVV (NYY)|1x25": {
+  "kmTL": "475910",
+  "sayfa": 7,
+  "mPerTl": 475.91
+ },
+ "YVV (NYY)|1x35": {
+  "kmTL": "647030",
+  "sayfa": 7,
+  "mPerTl": 647.03
+ },
+ "YVV (NYY)|1x50": {
+  "kmTL": "855600",
+  "sayfa": 7,
+  "mPerTl": 855.6
+ },
+ "YVV (NYY)|1x70": {
+  "kmTL": "1229000",
+  "sayfa": 7,
+  "mPerTl": 1229
+ },
+ "YVV (NYY)|1x95": {
+  "kmTL": "1681000",
+  "sayfa": 7,
+  "mPerTl": 1681
+ },
+ "YVV (NYY)|3x075": {
+  "kmTL": "54000",
+  "sayfa": 7,
+  "mPerTl": 54
+ },
+ "YVV (NYY)|1x120": {
+  "kmTL": "2130000",
+  "sayfa": 7,
+  "mPerTl": 2130
+ },
+ "YVV (NYY)|3x1": {
+  "kmTL": "66530",
+  "sayfa": 7,
+  "mPerTl": 66.53
+ },
+ "YVV (NYY)|1x150": {
+  "kmTL": "2583000",
+  "sayfa": 7,
+  "mPerTl": 2583
+ },
+ "YVV (NYY)|1x185": {
+  "kmTL": "3303000",
+  "sayfa": 7,
+  "mPerTl": 3303
+ },
+ "YVV (NYY)|1x240": {
+  "kmTL": "4296000",
+  "sayfa": 7,
+  "mPerTl": 4296
+ },
+ "YVV (NYY)|1x300": {
+  "kmTL": "5442000",
+  "sayfa": 7,
+  "mPerTl": 5442
+ },
+ "YVV (NYY)|1x400": {
+  "kmTL": "7139000",
+  "sayfa": 7,
+  "mPerTl": 7139
+ },
+ "YVV (NYY)|1x500": {
+  "kmTL": "9049000",
+  "sayfa": 7,
+  "mPerTl": 9049
+ },
+ "YVV (NYY)|1x630": {
+  "kmTL": "11711000",
+  "sayfa": 7,
+  "mPerTl": 11711
+ },
+ "YVV (NYY)|4x075": {
+  "kmTL": "68190",
+  "sayfa": 7,
+  "mPerTl": 68.19
+ },
+ "YVV (NYY)|5x075": {
+  "kmTL": "89940",
+  "sayfa": 7,
+  "mPerTl": 89.94
+ },
+ "YVV (NYY)|5x1": {
+  "kmTL": "108840",
+  "sayfa": 7,
+  "mPerTl": 108.84
+ },
+ "YVV (NYY)|2x6": {
+  "kmTL": "264180",
+  "sayfa": 8,
+  "mPerTl": 264.18
+ },
+ "YVV (NYY)|5x6": {
+  "kmTL": "607200",
+  "sayfa": 8,
+  "mPerTl": 607.2
+ },
+ "YVV (NYY)|2x10": {
+  "kmTL": "430740",
+  "sayfa": 8,
+  "mPerTl": 430.74
+ },
+ "YVV (NYY)|5x10": {
+  "kmTL": "992620",
+  "sayfa": 8,
+  "mPerTl": 992.62
+ },
+ "YVV (NYY)|2x16": {
+  "kmTL": "655940",
+  "sayfa": 8,
+  "mPerTl": 655.94
+ },
+ "YVV (NYY)|5x16": {
+  "kmTL": "1574000",
+  "sayfa": 8,
+  "mPerTl": 1574
+ },
+ "YVV (NYY)|5x35": {
+  "kmTL": "3391000",
+  "sayfa": 8,
+  "mPerTl": 3391
+ },
+ "YVV (NYY)|2x35": {
+  "kmTL": "1416000",
+  "sayfa": 8,
+  "mPerTl": 1416
+ },
+ "YVV (NYY)|5x50": {
+  "kmTL": "4599000",
+  "sayfa": 8,
+  "mPerTl": 4599
+ },
+ "YVV (NYY)|2x50": {
+  "kmTL": "1923000",
+  "sayfa": 8,
+  "mPerTl": 1923
+ },
+ "YVV (NYY)|5x70": {
+  "kmTL": "6624000",
+  "sayfa": 8,
+  "mPerTl": 6624
+ },
+ "YVV (NYY)|5x95": {
+  "kmTL": "8998000",
+  "sayfa": 8,
+  "mPerTl": 8998
+ },
+ "YVV (NYY)|5x120": {
+  "kmTL": "11450000",
+  "sayfa": 8,
+  "mPerTl": 11450
+ },
+ "YVV (NYY)|3x6": {
+  "kmTL": "368660",
+  "sayfa": 8,
+  "mPerTl": 368.66
+ },
+ "YVV (NYY)|5x150": {
+  "kmTL": "14092000",
+  "sayfa": 8,
+  "mPerTl": 14092
+ },
+ "YVV (NYY)|3x10": {
+  "kmTL": "607660",
+  "sayfa": 8,
+  "mPerTl": 607.66
+ },
+ "YVV (NYY)|5x185": {
+  "kmTL": "17810000",
+  "sayfa": 8,
+  "mPerTl": 17810
+ },
+ "YVV (NYY)|5x240": {
+  "kmTL": "23484000",
+  "sayfa": 8,
+  "mPerTl": 23484
+ },
+ "YVV (NYY)|5x300": {
+  "kmTL": "29041000",
+  "sayfa": 8,
+  "mPerTl": 29041
+ },
+ "YVV (NYY)|7x15": {
+  "kmTL": "252720",
+  "sayfa": 8,
+  "mPerTl": 252.72
+ },
+ "YVV (NYY)|7x25": {
+  "kmTL": "383450",
+  "sayfa": 8,
+  "mPerTl": 383.45
+ },
+ "YVV (NYY)|10x15": {
+  "kmTL": "368660",
+  "sayfa": 8,
+  "mPerTl": 368.66
+ },
+ "YVV (NYY)|10x25": {
+  "kmTL": "542680",
+  "sayfa": 8,
+  "mPerTl": 542.68
+ },
+ "YVV (NYY)|12x15": {
+  "kmTL": "418510",
+  "sayfa": 8,
+  "mPerTl": 418.51
+ },
+ "YVV (NYY)|12x25": {
+  "kmTL": "643770",
+  "sayfa": 8,
+  "mPerTl": 643.77
+ },
+ "YVV (NYY)|14x15": {
+  "kmTL": "496740",
+  "sayfa": 8,
+  "mPerTl": 496.74
+ },
+ "YVV (NYY)|14x25": {
+  "kmTL": "736660",
+  "sayfa": 8,
+  "mPerTl": 736.66
+ },
+ "YVV (NYY)|19x15": {
+  "kmTL": "646340",
+  "sayfa": 8,
+  "mPerTl": 646.34
+ },
+ "YVV (NYY)|19x25": {
+  "kmTL": "978540",
+  "sayfa": 8,
+  "mPerTl": 978.54
+ },
+ "YVV (NYY)|21x25": {
+  "kmTL": "1094000",
+  "sayfa": 8,
+  "mPerTl": 1094
+ },
+ "YVV (NYY)|24x15": {
+  "kmTL": "809560",
+  "sayfa": 8,
+  "mPerTl": 809.56
+ },
+ "YVV (NYY)|24x25": {
+  "kmTL": "1254000",
+  "sayfa": 8,
+  "mPerTl": 1254
+ },
+ "YVV (NYY)|30x15": {
+  "kmTL": "1022000",
+  "sayfa": 8,
+  "mPerTl": 1022
+ },
+ "YVV (NYY)|30x25": {
+  "kmTL": "1569000",
+  "sayfa": 8,
+  "mPerTl": 1569
+ },
+ "YVV (NYY)|40x15": {
+  "kmTL": "1323000",
+  "sayfa": 8,
+  "mPerTl": 1323
+ },
+ "YVV (NYY)|40x25": {
+  "kmTL": "2044000",
+  "sayfa": 8,
+  "mPerTl": 2044
+ },
+ "YVV (NYY)|4x6": {
+  "kmTL": "474130",
+  "sayfa": 8,
+  "mPerTl": 474.13
+ },
+ "YVV (NYY)|4x16": {
+  "kmTL": "1211000",
+  "sayfa": 8,
+  "mPerTl": 1211
+ },
+ "YVV (NYY)|4x35": {
+  "kmTL": "2642000",
+  "sayfa": 8,
+  "mPerTl": 2642
+ },
+ "YVV (NYY)|4x50": {
+  "kmTL": "3529000",
+  "sayfa": 8,
+  "mPerTl": 3529
+ },
+ "YVV (NYY)|4x70": {
+  "kmTL": "5067000",
+  "sayfa": 8,
+  "mPerTl": 5067
+ },
+ "YVV (NYY)|4x95": {
+  "kmTL": "6900000",
+  "sayfa": 8,
+  "mPerTl": 6900
+ },
+ "YVV (NYY)|4x120": {
+  "kmTL": "8793000",
+  "sayfa": 8,
+  "mPerTl": 8793
+ },
+ "YVV (NYY)|4x150": {
+  "kmTL": "10824000",
+  "sayfa": 8,
+  "mPerTl": 10824
+ },
+ "YVV (NYY)|4x185": {
+  "kmTL": "13761000",
+  "sayfa": 8,
+  "mPerTl": 13761
+ },
+ "YVV (NYY)|4x240": {
+  "kmTL": "17889000",
+  "sayfa": 8,
+  "mPerTl": 17889
+ },
+ "YVV (NYY)|4x300": {
+  "kmTL": "22908000",
+  "sayfa": 8,
+  "mPerTl": 22908
+ },
+ "YVZ2V (NYRY)|2x15": {
+  "kmTL": "136800",
+  "sayfa": 9,
+  "mPerTl": 136.8
+ },
+ "YVZ2V (NYRY)|2x25": {
+  "kmTL": "180000",
+  "sayfa": 9,
+  "mPerTl": 180
+ },
+ "YVC7V (NYCY)|2x4": {
+  "kmTL": "273600",
+  "sayfa": 9,
+  "mPerTl": 273.6
+ },
+ "YVC7V (NYCY)|2x6": {
+  "kmTL": "351000",
+  "sayfa": 9,
+  "mPerTl": 351
+ },
+ "YVC7V (NYCY)|2x10": {
+  "kmTL": "558000",
+  "sayfa": 9,
+  "mPerTl": 558
+ },
+ "YVZ2V (NYRY)|2x16": {
+  "kmTL": "828000",
+  "sayfa": 9,
+  "mPerTl": 828
+ },
+ "YVZ2V (NYRY)|3x15": {
+  "kmTL": "169200",
+  "sayfa": 9,
+  "mPerTl": 169.2
+ },
+ "YVZ2V (NYRY)|3x25": {
+  "kmTL": "234000",
+  "sayfa": 9,
+  "mPerTl": 234
+ },
+ "YVC7V (NYCY)|3x4": {
+  "kmTL": "360000",
+  "sayfa": 9,
+  "mPerTl": 360
+ },
+ "YVZ2V (NYRY)|3x6": {
+  "kmTL": "477000",
+  "sayfa": 9,
+  "mPerTl": 477
+ },
+ "YVZ2V (NYRY)|3x10": {
+  "kmTL": "756000",
+  "sayfa": 9,
+  "mPerTl": 756
+ },
+ "YVZ2V (NYRY)|3x16": {
+  "kmTL": "1134000",
+  "sayfa": 9,
+  "mPerTl": 1134
+ },
+ "YVZ2V (NYRY)|4x15": {
+  "kmTL": "208800",
+  "sayfa": 9,
+  "mPerTl": 208.8
+ },
+ "YVZ2V (NYRY)|4x25": {
+  "kmTL": "315000",
+  "sayfa": 9,
+  "mPerTl": 315
+ },
+ "YVZ2V (NYRY)|4x4": {
+  "kmTL": "450000",
+  "sayfa": 9,
+  "mPerTl": 450
+ },
+ "YVZ2V (NYRY)|4x6": {
+  "kmTL": "612000",
+  "sayfa": 9,
+  "mPerTl": 612
+ },
+ "YVZ2V (NYRY)|4x10": {
+  "kmTL": "990000",
+  "sayfa": 9,
+  "mPerTl": 990
+ },
+ "YVZ2V (NYRY)|5x15": {
+  "kmTL": "273600",
+  "sayfa": 9,
+  "mPerTl": 273.6
+ },
+ "YVZ2V (NYRY)|5x25": {
+  "kmTL": "374400",
+  "sayfa": 9,
+  "mPerTl": 374.4
+ },
+ "YVZ2V (NYRY)|5x4": {
+  "kmTL": "545400",
+  "sayfa": 9,
+  "mPerTl": 545.4
+ },
+ "YVZ2V (NYRY)|5x6": {
+  "kmTL": "738000",
+  "sayfa": 9,
+  "mPerTl": 738
+ },
+ "YVZ2V (NYRY)|5x10": {
+  "kmTL": "1206000",
+  "sayfa": 9,
+  "mPerTl": 1206
+ },
+ "YVZ2V (NYRY)|5x16": {
+  "kmTL": "1800000",
+  "sayfa": 9,
+  "mPerTl": 1800
+ },
+ "YXV (N2XY)|2x35": {
+  "kmTL": "1427000",
+  "sayfa": 10,
+  "mPerTl": 1427
+ },
+ "YXV (N2XY)|2x50": {
+  "kmTL": "1866000",
+  "sayfa": 10,
+  "mPerTl": 1866
+ },
+ "YXV (N2XY)|1x4": {
+  "kmTL": "89150",
+  "sayfa": 10,
+  "mPerTl": 89.15
+ },
+ "YXV (N2XY)|1x6": {
+  "kmTL": "126290",
+  "sayfa": 10,
+  "mPerTl": 126.29
+ },
+ "YXV (N2XY)|1x10": {
+  "kmTL": "204290",
+  "sayfa": 10,
+  "mPerTl": 204.29
+ },
+ "YXV (N2XY)|1x16": {
+  "kmTL": "312930",
+  "sayfa": 10,
+  "mPerTl": 312.93
+ },
+ "YXV (N2XY)|1x25": {
+  "kmTL": "486580",
+  "sayfa": 10,
+  "mPerTl": 486.58
+ },
+ "YXV (N2XY)|1x35": {
+  "kmTL": "662620",
+  "sayfa": 10,
+  "mPerTl": 662.62
+ },
+ "YXV (N2XY)|1x50": {
+  "kmTL": "874180",
+  "sayfa": 10,
+  "mPerTl": 874.18
+ },
+ "YXV (N2XY)|1x70": {
+  "kmTL": "1263000",
+  "sayfa": 10,
+  "mPerTl": 1263
+ },
+ "YXV (N2XY)|1x95": {
+  "kmTL": "1709000",
+  "sayfa": 10,
+  "mPerTl": 1709
+ },
+ "YXV (N2XY)|1x120": {
+  "kmTL": "2173000",
+  "sayfa": 10,
+  "mPerTl": 2173
+ },
+ "YXV (N2XY)|1x150": {
+  "kmTL": "2638000",
+  "sayfa": 10,
+  "mPerTl": 2638
+ },
+ "YXV (N2XY)|1x185": {
+  "kmTL": "3343000",
+  "sayfa": 10,
+  "mPerTl": 3343
+ },
+ "YXV (N2XY)|1x240": {
+  "kmTL": "4365000",
+  "sayfa": 10,
+  "mPerTl": 4365
+ },
+ "YXV (N2XY)|5x95": {
+  "kmTL": "8796000",
+  "sayfa": 10,
+  "mPerTl": 8796
+ },
+ "YXV (N2XY)|1x300": {
+  "kmTL": "5572000",
+  "sayfa": 10,
+  "mPerTl": 5572
+ },
+ "YXV (N2XY)|5x120": {
+  "kmTL": "11246000",
+  "sayfa": 10,
+  "mPerTl": 11246
+ },
+ "YXV (N2XY)|1x400": {
+  "kmTL": "7243000",
+  "sayfa": 10,
+  "mPerTl": 7243
+ },
+ "YXV (N2XY)|5x150": {
+  "kmTL": "13715000",
+  "sayfa": 10,
+  "mPerTl": 13715
+ },
+ "YXV (N2XY)|1x500": {
+  "kmTL": "9100000",
+  "sayfa": 10,
+  "mPerTl": 9100
+ },
+ "YXV (N2XY)|5x185": {
+  "kmTL": "17372000",
+  "sayfa": 10,
+  "mPerTl": 17372
+ },
+ "YXV (N2XY)|1x630": {
+  "kmTL": "11700000",
+  "sayfa": 10,
+  "mPerTl": 11700
+ },
+ "YXV (N2XY)|5x240": {
+  "kmTL": "22858000",
+  "sayfa": 10,
+  "mPerTl": 22858
+ },
+ "YXV (N2XY)|3x400": {
+  "kmTL": "25600000",
+  "sayfa": 11,
+  "mPerTl": 25600
+ },
+ "YXV (N2XY)|2x10": {
+  "kmTL": "543600",
+  "sayfa": 11,
+  "mPerTl": 543.6
+ },
+ "YXV (N2XY)|4x400": {
+  "kmTL": "29534000",
+  "sayfa": 11,
+  "mPerTl": 29534
+ },
+ "YAXV (NA2XY)|4x16": {
+  "kmTL": "207610",
+  "sayfa": 24,
+  "mPerTl": 207.61
+ },
+ "YAXV (NA2XY)|4x25": {
+  "kmTL": "310000",
+  "sayfa": 24,
+  "mPerTl": 310
+ },
+ "YAXV (NA2XY)|4x35": {
+  "kmTL": "398580",
+  "sayfa": 24,
+  "mPerTl": 398.58
+ },
+ "YAXV (NA2XY)|4x50": {
+  "kmTL": "531430",
+  "sayfa": 24,
+  "mPerTl": 531.43
+ },
+ "YAXV (NA2XY)|4x70": {
+  "kmTL": "735150",
+  "sayfa": 24,
+  "mPerTl": 735.15
+ },
+ "YAXV (NA2XY)|4x95": {
+  "kmTL": "983150",
+  "sayfa": 24,
+  "mPerTl": 983.15
+ },
+ "YAXV (NA2XY)|4x120": {
+  "kmTL": "1223000",
+  "sayfa": 24,
+  "mPerTl": 1223
+ },
+ "YAXV (NA2XY)|4x150": {
+  "kmTL": "1515000",
+  "sayfa": 24,
+  "mPerTl": 1515
+ },
+ "YAXV (NA2XY)|4x185": {
+  "kmTL": "1878000",
+  "sayfa": 24,
+  "mPerTl": 1878
+ },
+ "YAXV (NA2XY)|4x240": {
+  "kmTL": "2395000",
+  "sayfa": 24,
+  "mPerTl": 2395
+ },
+ "YAXV (NA2XY)|4x300": {
+  "kmTL": "2974000",
+  "sayfa": 24,
+  "mPerTl": 2974
+ },
+ "YAXV (NA2XY)|5x16": {
+  "kmTL": "260010",
+  "sayfa": 24,
+  "mPerTl": 260.01
+ },
+ "YAXV (NA2XY)|2x16": {
+  "kmTL": "137050",
+  "sayfa": 24,
+  "mPerTl": 137.05
+ },
+ "YAXV (NA2XY)|5x25": {
+  "kmTL": "384280",
+  "sayfa": 24,
+  "mPerTl": 384.28
+ },
+ "YAXV (NA2XY)|2x25": {
+  "kmTL": "201650",
+  "sayfa": 24,
+  "mPerTl": 201.65
+ },
+ "YAXV (NA2XY)|5x35": {
+  "kmTL": "497360",
+  "sayfa": 24,
+  "mPerTl": 497.36
+ },
+ "YAXV (NA2XY)|2x35": {
+  "kmTL": "260080",
+  "sayfa": 24,
+  "mPerTl": 260.08
+ },
+ "YAXV (NA2XY)|5x50": {
+  "kmTL": "669210",
+  "sayfa": 24,
+  "mPerTl": 669.21
+ },
+ "YAXV (NA2XY)|2x50": {
+  "kmTL": "326480",
+  "sayfa": 24,
+  "mPerTl": 326.48
+ },
+ "YAXV (NA2XY)|5x70": {
+  "kmTL": "934840",
+  "sayfa": 24,
+  "mPerTl": 934.84
+ },
+ "YAXV (NA2XY)|3x16": {
+  "kmTL": "171830",
+  "sayfa": 24,
+  "mPerTl": 171.83
+ },
+ "YAXV (NA2XY)|5x95": {
+  "kmTL": "1258000",
+  "sayfa": 24,
+  "mPerTl": 1258
+ },
+ "YAXV (NA2XY)|5x120": {
+  "kmTL": "1565000",
+  "sayfa": 24,
+  "mPerTl": 1565
+ },
+ "YAXV (NA2XY)|5x150": {
+  "kmTL": "1933000",
+  "sayfa": 24,
+  "mPerTl": 1933
+ },
+ "YAXV (NA2XY)|5x185": {
+  "kmTL": "2409000",
+  "sayfa": 24,
+  "mPerTl": 2409
+ },
+ "YAXV (NA2XY)|5x240": {
+  "kmTL": "3189000",
+  "sayfa": 24,
+  "mPerTl": 3189
+ },
+ "YAXV (NA2XY)|5x300": {
+  "kmTL": "3949000",
+  "sayfa": 24,
+  "mPerTl": 3949
+ }
+}

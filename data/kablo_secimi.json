@@ -1,0 +1,95 @@
+{
+  "_aciklama": "AG kablo tipi secimi. Trafo baglantilarinda bakir NYY kullanilir (kullanici teyidi 2026-10-06). Motor varsayilani bu dosyadan okur.",
+  "surum": "0.2.0",
+  "guncelleme": "2026-10-06",
+
+  "secim": {
+    "varsayilan": "NYY-Cu",
+    "_kural": "Trafo baglantilarinda genelde bakir secilir. Aluminyum secilecekse akim tasima kapasitesi duser, bu yuzden 2 kesit ustune cikilir. Bu eslesme TEKRAR EDILMEZ — motor ayni kesiti iki kere saymaz.",
+    "aluminyumIcinKesitKurali": {
+      "_kural": "Al -> Cu eslesmesi. Iletken kesiti 2 kademe buyutulur.",
+      "eslesme": {
+        "16": "35", "25": "50", "35": "70", "50": "95", "70": "120",
+        "95": "150", "120": "185", "150": "240", "185": "300", "240": "400"
+      },
+      "_kaynak": "KESIT KURALI — KULLANICI TAYINI (2026-10-06). Iletken kesiti 2 kademe buyutulur. Projeye gore dogrulanmali.",
+      "_uyari": "Bu eslesme AL -> bakir yonunde. Motor Cu kesitini alip Al kullanirsa once bu eslesmeyle Al kesitini bulur."
+    }
+  },
+
+  "tipler": {
+    "NYY-Cu": {
+      "ad": "Bakır NYY 0,6/1 kV (CPR Class: Eca)",
+      "etiket": "YVV (NYY)",
+      "kaynakSayfa": [7, 8],
+      "kullan": true,
+      "_not": "Motorda varsayilan. Trafo baglantilarinda bakir seciliyor."
+    },
+    "NA2XY-Al": {
+      "ad": "Alüminyum NA2XY 0,6/1 kV (CPR Class: Eca)",
+      "etiket": "YAXV (NA2XY)",
+      "kaynakSayfa": [24, 25],
+      "kullan": false,
+      "_not": "Yedek. Kullanilirsa kesit 2 kademe buyutulur."
+    },
+    "NYCY-Cu": {
+      "ad": "Bakır NYCY konsantrik 0,6/1 kV (CPR Class: Eca)",
+      "etiket": "YVC7V (NYCY)",
+      "kaynakSayfa": [9],
+      "kullan": false,
+      "_not": "Konsantrik iletkenli. BFK'ta karsiligi dogrulanmadi."
+    },
+    "NYRY-Cu": {
+      "ad": "Bakır NYRY zırhlı 0,6/1 kV (CPR Class: Eca)",
+      "etiket": "YVZ2V (NYRY)",
+      "kaynakSayfa": [9],
+      "kullan": false
+    }
+  },
+
+  "bedeller": {
+    "_birNot": "TL/m. Kaynak: tools/oznur_ag.mjs ciktisi (data/oznur_ag.json). Iskonto uygulanmamis — %65 tedarikci_uret.mjs'te uygulanir.",
+
+    "NYY-Cu": {
+      "tek": { "4": 90.10, "6": 125.78, "10": 201.68, "16": 308.73, "25": 475.91, "35": 647.03, "50": 855.60, "70": 1229.00, "95": 1681.00, "120": 2130.00, "150": 2583.00, "185": 3303.00, "240": 4296.00, "300": 5442.00, "400": 7139.00, "500": 9049.00, "630": 11711.00 },
+      "ucNotr": {
+        "_aciklama": "Notrlu 3-damar (3xKesit+Notr). EKRAN GORUNTUSU (2026-10-07, sayfa 8): 3x16+10: 1.100.000, 3x25+16: 1.696.000, 3x35+16: 2.212.000, 3x50+25: 3.038.000, 3x70+35: 4.309.000, 3x95+50: 5.920.000, 3x120+70: 7.606.000, 3x150+70: 9.061.000, 3x185+95: 11.513.000, 3x240+120: 14.983.000, 3x300+150: 19.715.000 (TL/km -> TL/m). Extractor (oznur_ag.mjs) bu satirlari yakalayamadi; ham oznur_ag.json'da yok. Anahtar 'kesit+notr'.",
+        "16+10": 1100.00, "25+16": 1696.00, "35+16": 2212.00, "50+25": 3038.00,
+        "70+35": 4309.00, "95+50": 5920.00, "120+70": 7606.00, "150+70": 9061.00,
+        "185+95": 11513.00, "240+120": 14983.00, "300+150": 19715.00
+      },
+      "iki": { "0.75": 39.07, "1": 48.29, "1.5": 85.73, "2.5": 126.67, "4": 191.63, "6": 253.40, "10": 383.16, "16": 551.75, "25": 784.16, "35": 1416.00, "50": 1923.00 },
+      "uc": { "0.75": 54.00, "1": 66.53, "1.5": 117.30, "2.5": 172.50, "4": 264.18, "6": 368.66, "10": 607.66, "16": 914.20, "25": 1470.00, "35": 2028.00, "50": 2741.00, "70": 3963.00, "95": 5422.00, "120": 6920.00, "150": 8635.00, "185": 10861.00, "240": 14164.00, "300": 17681.00 },
+      "dort": { "0.75": 68.19, "1.5": 146.88, "2.5": 217.65, "4": 336.53, "6": 444.10, "10": 673.40, "16": 1211.00, "25": 1923.00, "35": 2642.00, "50": 3529.00, "70": 5067.00, "95": 6900.00, "120": 8793.00, "150": 10824.00, "185": 13761.00, "240": 17889.00, "300": 22908.00 },
+      "bes": { "1": 108.84, "1.5": 183.40, "2.5": 277.98, "4": 419.13, "6": 607.20, "10": 992.62, "16": 1574.00, "35": 3391.00, "50": 4599.00, "70": 6624.00, "95": 8998.00, "120": 11450.00, "150": 14092.00, "185": 17810.00, "240": 23484.00, "300": 29041.00 },
+      "yedi": { "1.5": 252.72, "2.5": 383.45 },
+      "dokuz": { "1.5": 368.66, "2.5": 542.68 },
+      "onIki": { "1.5": 418.51, "2.5": 643.77 },
+      "onDort": { "1.5": 496.74, "2.5": 736.66 },
+      "onDokuz": { "1.5": 646.34, "2.5": 978.54 },
+      "yirmiBir": { "2.5": 1094.00 },
+      "yirmiDort": { "1.5": 809.56, "2.5": 1254.00 },
+      "otuz": { "1.5": 1022.00, "2.5": 1569.00 },
+      "kirk": { "1.5": 1323.00, "2.5": 2044.00 }
+    },
+
+    "NA2XY-Al": {
+      "tek": { "16": 53.15, "25": 78.63, "35": 100.53, "50": 129.90, "70": 175.38, "95": 233.83, "120": 285.39, "150": 350.27, "185": 434.84, "240": 549.15, "300": 682.62, "400": 870.90 },
+      "iki": { "16": 137.05, "25": 201.65, "35": 260.08, "50": 326.48 },
+      "uc": { "16": 171.83, "25": 261.16, "35": 328.10, "50": 431.73, "70": 584.58, "95": 779.43, "120": 965.86, "150": 1186.00, "185": 1471.00, "240": 1860.00, "300": 2324.00, "400": 2975.00 },
+      "dort": { "16": 207.61, "25": 310.00, "35": 398.58, "50": 531.43, "70": 735.15, "95": 983.15, "120": 1223.00, "150": 1515.00, "185": 1878.00, "240": 2395.00, "300": 2974.00 },
+      "bes": { "16": 260.01, "25": 384.28, "35": 497.36, "50": 669.21, "70": 934.84, "95": 1258.00, "120": 1565.00, "150": 1933.00, "185": 2409.00, "240": 3189.00, "300": 3949.00 }
+    }
+  },
+
+  "kabulEdilenler": {
+    "_kural": "Listede ayni kalem birden fazla sayfada farkli bedelle geciyorsa secim buradan yapilir. Bu liste insan kararidir; otomatik cikarim yapamaz.",
+    "kararlar": [
+      { "kalem": "4x95", "secilen": "NYY-Cu 6.900,00 TL/m", "reddedilen": "NA2XY-Al 983,15 TL/m", "gerekce": "Trafo baglantisinda bakir seciliyor (kullanici)" },
+      { "kalem": "4x35", "secilen": "NYY-Cu 2.642,00", "reddedilen": "NYCY-Cu 2.898,00", "gerekce": "NYY standart tip, konsantrik degil" },
+      { "kalem": "4x150", "secilen": "NYY-Cu 10.824,00", "reddedilen": "NYCY-Cu 11.160,00", "gerekce": "NYY standart tip" },
+      { "kalem": "4x240", "secilen": "NYY-Cu 17.889,00", "reddedilen": "NYCY-Cu 18.000,00", "gerekce": "NYY standart tip" }
+    ],
+    "_kaynak": "KULLANICI TAYINI (2026-10-06). Listeden otomatik secim yapilmiyor."
+  }
+}

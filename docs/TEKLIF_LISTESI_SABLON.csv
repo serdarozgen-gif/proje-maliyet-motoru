@@ -1,0 +1,38 @@
+poz;ad;birim;malzeme;montaj
+85.610.1101;25 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;232997.26;36822.50
+85.610.1102;50 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;232997.26;36822.50
+85.610.1103;100 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;232997.26;36822.50
+85.610.1104;160 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;313785.61;46955.26
+85.610.1105;250 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;395419.18;56628.46
+85.610.1106;400 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;486561.40;72015.42
+85.610.1107;630 kVA yağlı tip trafo (6,3/0,4 kV, bakır sargılı);Ad;695927.90;83025.29
+85.610.1303;100 kVA yağlı tip trafo (10,5/0,4 kV, bakır sargılı);Ad;232997.26;36822.50
+85.610.1304;160 kVA yağlı tip trafo (10,5/0,4 kV, bakır sargılı);Ad;313785.61;46955.26
+85.610.1305;250 kVA yağlı tip trafo (10,5/0,4 kV, bakır sargılı);Ad;395419.18;56628.46
+85.610.1306;400 kVA yağlı tip trafo (10,5/0,4 kV, bakır sargılı);Ad;486561.40;72015.42
+85.630.1101;25 kVA hermetik tip trafo (6,3/0,4 kV, bakır sargılı);Ad;163127.95;27886.20
+85.630.1106;100 kVA hermetik tip trafo (6,3/0,4 kV, bakır sargılı);Ad;263554.23;36822.50
+85.630.1306;100 kVA hermetik tip trafo (10,5/0,4 kV, bakır sargılı);Ad;263554.23;36822.50
+85.203.1101;Dikdörtgen kesitli bakır bara;kg;916.85;354.09
+85.203.1201;Dikdörtgen kesitli alüminyum bara;kg;189.10;410.25
+85.230.1101;Trafo AG buşing izolasyon kapağı (25-160 kVA);Ad;135.69;83.91
+85.230.1102;Trafo AG buşing izolasyon kapağı (250-400 kVA);Ad;160.40;83.91
+85.230.1103;Trafo AG buşing izolasyon kapağı (630-800 kVA);Ad;185.05;83.91
+85.230.1104;Trafo AG buşing izolasyon kapağı (1000-2000 kVA);Ad;203.58;83.91
+85.230.1106;OG buşing izolasyon kapağı;Ad;246.74;83.91
+85.530.2401;OG ana koruma sigorta grubu 12 kV / 630 A (takım);Ad;4966.25;3831.66
+85.530.2402;OG ana koruma sigorta grubu 17,5 kV / 630 A (takım);Ad;5793.02;3822.77
+85.530.2403;OG ana koruma sigorta grubu 36 kV / 630 A (takım);Ad;7452.19;4689.32
+85.720.1301;AG ana dağıtım panosu 50 kVA;Ad;77471.47;19512.81
+85.720.1302;AG ana dağıtım panosu 100 kVA;Ad;78219.13;19512.81
+85.720.1303;AG ana dağıtım panosu 160 kVA;Ad;85980.52;19527.48
+85.720.1304;AG ana dağıtım panosu 250 kVA;Ad;119340.24;22741.06
+85.720.1305;AG ana dağıtım panosu 400 kVA;Ad;139989.82;22770.21
+85.790.1202;Topraklama düzeni (örgülü çelik iletken + köşebent), takım;Ad;1187.49;2853.96
+85.790.1203;Topraklama düzeni (köşebent + kazık bağlantısı), takım;Ad;822.45;1208.27
+85.790.1204;Topraklama elektrodu (çelik çubuk + bakır kaplı uç), takım;Ad;2404.06;1208.27
+85.105.2301;Betonarme trafo platformu PL-250;Ad;14268.35;36.00
+85.105.2302;Betonarme trafo platformu PL-400;Ad;18643.61;36.00
+85.490.1201;Baklavalı sac kanal kapama elemanı;kg;35.08;51.28
+85.490.1202;Beton kablo kanalı (kapağı hariç);m;2000.44;
+85.490.1203;Beton kablo kanalı ve baklavalı sac kapak;m;4432.24;

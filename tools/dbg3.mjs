@@ -1,0 +1,12 @@
+﻿import fs from "node:fs"; import path from "node:path";
+import { yayimAdi } from "./yayim_adi.mjs";
+const db=JSON.parse(fs.readFileSync(path.join(import.meta.dirname,"..","data","tedas_bfk_2026.json"),"utf8"));
+const ted=JSON.parse(fs.readFileSync(path.join(import.meta.dirname,"..","data","tedarikci_fiyatlari.json"),"utf8"));
+const k=db.kalemler.find(x=>x.poz==="85.630.1506");
+console.log("HAM TANIM :",JSON.stringify(k.tanim));
+console.log("GRUP      :",k.grupKodu);
+console.log("UST BLOK  :",k.poz.slice(0,8));
+console.log("yayimAdi  :",JSON.stringify(yayimAdi(k.poz,k.tanim,k.grupAdi)));
+console.log("");
+console.log("ASTOR 100 :",ted.trafo.aPlus["list USD"][100]);
+console.log("ASTOR 25  :",ted.trafo.aPlus["list USD"][25]);

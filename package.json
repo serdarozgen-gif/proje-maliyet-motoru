@@ -1,0 +1,13 @@
+{
+  "name": "proje-maliyet-motoru",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Proje Yaklaşık Maliyet Motoru — YG/AG trafo bağlantısı",
+  "scripts": {
+    "build": "node tools/bfk_katalog.mjs && node tools/tedarikci_uret.mjs && node tools/web_eksle.mjs",
+    "test": "node tools/motor_test.mjs && node tools/arayuz_test.mjs && node tools/normlar_koruma_test.mjs",
+    "kalibrasyon": "node tools/kalibrasyon.mjs",
+    "serve": "node tools/yerel_sunucu.mjs"
+  }
+}

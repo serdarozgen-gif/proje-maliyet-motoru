@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<script>
+// file:// ile açıldığında ES module + fetch çalışmaz. Kullanıcı sayfayı
+// görür ama hiçbir liste dolmaz, hesapla düğmesi tepki vermez. Bunu
+// açıkça söyle — yoksa "bozuk sayfa" sanılır.
+if (location.protocol === 'file:') {
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('.motor .girdi').insertAdjacentHTML('afterbegin',
+      `<div class="tespit hata" style="margin-bottom:22px">
+        <b>Sayfa yerel dosyadan açıldı — motor çalışmıyor</b>
+        Bu araç modül ve veri okuma kullanır; <code>file://</code> ile çalışmaz.
+        Terminalde <code>npm run serve</code> çalıştırıp
+        <code>http://localhost:8099/</code> adresini açın.
+      </div>`);
+  });
+}
+</script>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Proje Yaklaşık Maliyet Motoru | Atlasgrid Taahhüt</title>
+<meta name="description" content="YG/AG trafo bağlantısı projeniz için malzeme ve işçilik kalemlerini, haftalık güncellenen fiyat listesiyle anında hesaplayın. Ücretsiz, kayıt gerektirmez.">
+<link rel="stylesheet" href="assets/css/atlasgrid.css">
+<link rel="stylesheet" href="maliyet-motoru.css">
+</head>
+<body>
+
+<header class="ust">
+  <div class="girdi ust-ic">
+    <a class="mark" href="index.html"><img src="assets/img/logo-kilit-birincil.svg" alt="Atlasgrid Taahhüt"></a>
+    <nav class="menu" id="menu">
+      <a href="hizmetler.html">Hizmetler</a>
+      <a href="sektorler.html">Sektörler</a>
+      <a href="projeler.html">Projeler</a>
+      <a href="teknik-bilgi-merkezi.html">Teknik Bilgi Merkezi</a>
+    </nav>
+    <a class="cta" href="iletisim.html">Teklif Al</a>
+    <button class="menu-burger" id="burger" aria-label="Menü">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="girdi">
+    <span class="etiket">Ücretsiz araç</span>
+    <h1>Proje <span class="slogan">Yaklaşık Maliyet</span> Motoru</h1>
+    <p class="lead">
+      Trafo bağlantısı projenizin malzeme ve işçilik dökümünü saniyeler içinde hesaplayın.
+      Kayıt gerekmez, kişisel bilgi istemezsiniz.
+    </p>
+  </div>
+</section>
+
+<main class="motor">
+  <div class="girdi">
+
+    <!-- Tohum fiyat uyarısı: kaynak 'seed-tedas-bfk' ise görünür -->
+    <div class="motor-uyari gizli" id="uyari">
+      <div>
+        <b>Bu araç yayına hazır değil</b>
+        <span id="uyari-metin"></span>
+      </div>
+    </div>
+
+    <!-- ================= GİRDİ ================= -->
+    <form class="girdi-kart" id="girdi-form">
+      <h2>Proje parametreleri</h2>
+      <p class="ipucu">Yalnızca teknik bilgileri girin. Kişisel veri istenmez.</p>
+
+      <div class="bolum-baslik">Trafo</div>
+      <div class="alan">
+        <div>
+          <label for="trafoTipi">Trafo tipi</label>
+          <select id="trafoTipi">
+            <option value="yagli">Yağlı tip (genleşme deposulu)</option>
+            <option value="hermetik">Hermetik (tam kapalı)</option>
+          </select>
+        </div>
+        <div>
+          <label for="kva">Trafo gücü</label>
+          <select id="kva"></select>
+        </div>
+        <div>
+          <label for="ogSistem">OG sistem gerilimi</label>
+          <select id="ogSistem">
+            <option value="36" selected>36 kV (28,5-36 kV)</option>
+          </select>
+          <span class="yardim">Şimdilik tek gerilim.</span>
+        </div>
+        <div>
+          <label for="hucreTipi">OG trafo koruma hücresi</label>
+          <select id="hucreTipi">
+            <option value="oto" selected>Otomatik (RMU öncelikli)</option>
+            <option value="rmu">RMU — gaz yalıtımlı (AS36 LF)</option>
+            <option value="metal">Metal mahfazalı — hava yalıtımlı (AS36 LF)</option>
+          </select>
+          <span class="yardim">RMU ~294 bin TL, metal ~98 bin TL (malzeme).</span>
+        </div>
+        <div>
+          <label for="platform">Betonarme platform</label>
+          <select id="platform">
+            <option value="yagli">Gerekli</option>
+            <option value="yok">Gerekmiyor</option>
+          </select>
+          <span class="yardim">Karar projeye aittir.</span>
+        </div>
+      </div>
+
+      <div class="bolum-baslik">OG kablo</div>
+      <div class="alan">
+        <div>
+          <label for="ogKabloCekirdek">Kablo yapısı</label>
+          <select id="ogKabloCekirdek">
+            <option value="3">Üç çekirdekli (3×150+25)</option>
+            <option value="1">Tek çekirdekli (3 × 1×150+25)</option>
+          </select>
+        </div>
+        <div>
+          <label for="ogKabloKesit">Faz kesiti (mm²)</label>
+          <select id="ogKabloKesit"></select>
+        </div>
+        <div>
+          <label for="ogKabloUzunluk">Güzergâh uzunluğu (m)</label>
+          <input id="ogKabloUzunluk" type="number" min="1" step="1" value="50">
+        </div>
+        <div>
+          <label for="ogKabloYon">Güzergâh sayısı</label>
+          <input id="ogKabloYon" type="number" min="1" step="1" value="1">
+        </div>
+        <div>
+          <label for="ekMansonAdet">Birleştirme yeri (ek adedi)</label>
+          <input id="ekMansonAdet" type="number" min="0" step="1" value="0">
+        </div>
+      </div>
+
+      <div class="bolum-baslik">AG taraf ve saha</div>
+      <div class="alan">
+        <div>
+          <label for="agPano">AG ana dağıtım panosu</label>
+          <select id="agPano">
+            <option value="oto">Otomatik seç (trafo gücüne göre)</option>
+            <option value="yok">Kapsam dışı</option>
+          </select>
+        </div>
+        <div>
+          <label for="agKabloCekirdek">AG kablo çekirdek sayısı</label>
+          <select id="agKabloCekirdek">
+            <option value="4">4 çekirdek</option>
+            <option value="3">3 çekirdek</option>
+            <option value="1">1 çekirdek</option>
+          </select>
+        </div>
+        <div>
+          <label for="agKabloKesit">AG kablo kesiti (mm²)</label>
+          <select id="agKabloKesit"></select>
+        </div>
+        <div>
+          <label for="agKabloUzunluk">AG kablo uzunluğu (m)</label>
+          <input id="agKabloUzunluk" type="number" min="0" step="1" value="10">
+        </div>
+        <div>
+          <label for="kanal">Kablo kanalı tipi</label>
+          <select id="kanal">
+            <option value="85.490.1203">Beton kanal + baklavalı sac</option>
+            <option value="85.490.1202">Beton kanal (kapağı hariç)</option>
+            <option value="85.490.1201">Baklavalı sac kapama elemanı</option>
+          </select>
+        </div>
+        <div>
+          <label for="kanalUzunluk">Kanal uzunluğu (m)</label>
+          <input id="kanalUzunluk" type="number" min="0" step="1" value="0">
+          <span class="yardim">0 = kanal yok.</span>
+        </div>
+        <div>
+          <label for="topraklama">Topraklama düzeni</label>
+          <select id="topraklama">
+            <option value="85.790.1202">Örgülü çelik iletken + köşebent</option>
+            <option value="85.790.1203">Köşebent + kazık bağlantısı</option>
+            <option value="85.790.1204">Topraklama elektrodu</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="eylem-dugme">
+        <button class="btn son" type="button" id="btn-hesap">Hesapla</button>
+        <button class="btn" type="button" id="btn-sifirla">Varsayılanlara dön</button>
+      </div>
+    </form>
+
+    <!-- ================= SONUÇ ================= -->
+    <div id="cikti" hidden>
+
+      <section class="sonuc">
+        <div class="ust">
+          <div>
+            <span class="etiket">Yaklaşık proje maliyeti</span>
+            <div class="rakam" id="toplam">—</div>
+          </div>
+          <div class="dagilim">
+            <div>Malzeme<b id="toplam-malzeme">—</b></div>
+            <div>İşçilik<b id="toplam-iscilik">—</b></div>
+            <div>Kalem<b id="toplam-kalem">—</b></div>
+          </div>
+        </div>
+        <div class="pay-cubuk">
+          <i class="m" id="pay-malzeme"></i>
+          <i class="i" id="pay-iscilik"></i>
+        </div>
+        <p class="sonuc-not" id="sonuc-not"></p>
+      </section>
+
+      <section class="tablo-kart">
+        <h3>Maliyet dökümü</h3>
+        <div class="tbl-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Poz</th>
+                <th>Kalem</th>
+                <th class="sayi">Miktar</th>
+                <th class="sayi">Malzeme</th>
+                <th class="sayi">İşçilik</th>
+                <th class="sayi">Satır toplamı</th>
+              </tr>
+            </thead>
+            <tbody id="dokum"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="tespit-alani"></section>
+
+      <!-- ================= KVKK + TALEP ================= -->
+      <section class="girdi-kart">
+        <h2>Detaylı dökümü indirin</h2>
+        <p class="ipucu">
+          Yukarıdaki özet herkese açıktır. Kalem kalem fiyat dökümünü ve
+          projenize özel teklif için bizimle iletişime geçin.
+        </p>
+
+        <form id="talep-form">
+          <div class="alan">
+            <div>
+              <label for="ad">Ad Soyad</label>
+              <input id="ad" name="ad" type="text" required autocomplete="name">
+            </div>
+            <div>
+              <label for="eposta">E-posta</label>
+              <input id="eposta" name="eposta" type="email" required autocomplete="email">
+            </div>
+            <div>
+              <label for="telefon">Telefon <span class="yardim">isteğe bağlı</span></label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel">
+            </div>
+            <div>
+              <label for="firma">Firma / kurum</label>
+              <input id="firma" name="firma" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="alan satir-tek" style="margin-top:16px">
+            <div>
+              <label for="not">Proje notu</label>
+              <input id="not" name="not" type="text"
+                     placeholder="Örn. Kepez OSB 3. cadde 250 kVA bağlantı, 60 m kablo">
+            </div>
+          </div>
+
+          <div class="eylem-dugme">
+            <button class="btn" type="submit" id="btn-gonder">Talebimi gönder</button>
+            <span id="gonder-durum" style="font-size:14px;color:var(--muted)"></span>
+          </div>
+
+          <p class="kvkk">
+            <b>KVKK aydınlatma metni:</b> Bu form aracılığıyla yalnızca ad, e-posta ve
+            varsa iletişim bilgileriniz işlenir; hesaplama sırasında girdiğiniz proje
+            teknik verileri tarayıcınızda kalır ve sunucuya gönderilmez. Verileriniz
+            yalnızca talebinize yanıt vermek amacıyla işlenir, üçüncü taraflarla
+            paylaşılmaz ve talebiniz sonrasında silinir. Veri minimizasyonu ilkesi
+            gereği zorunlu alan dışındaki hiçbir bilgi istenmemektedir.
+            Sorularınız için: <a href="mailto:serdar.ozgen@atlasgrid.com.tr">serdar.ozgen@atlasgrid.com.tr</a>
+          </p>
+        </form>
+      </section>
+    </div>
+
+    <!-- ================= BİLGİ ================= -->
+    <section class="bilgi">
+      <div class="k">
+        <h4>Hangi kalemler hesaplanır?</h4>
+        <p>Trafo, izolasyon kapağı, platform, OG koruma, OG kablo ve bağlantı elemanları,
+           AG pano ve kablo, topraklama ve kanal.</p>
+      </div>
+      <div class="k">
+        <h4>İşçilik bedeli nedir?</h4>
+        <p>İşçilik, referans birim montaj bedeli üzerine eklenen oranla hesaplanır.
+           Oran motorun güncel parametresidir.</p>
+      </div>
+      <div class="k">
+        <h4>Sonuç kesin teklif midir?</h4>
+        <p>Hayır. Yaklaşık maliyettir. Yerleşim, zemin, trafik, mesafe ve proje
+           koşulları sonucu doğrudan etkiler.</p>
+      </div>
+    </section>
+
+  </div>
+</main>
+
+<footer style="background:var(--navy2);color:#9FBEDA;padding:28px 0;font-size:14px">
+  <div class="girdi" style="display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between">
+    <div>© 2026 Atlasgrid Taahhüt — Proje Yaklaşık Maliyet Motoru</div>
+    <div><a href="tel:+905304453854" style="color:#D3E4F3">0530 445 38 54</a></div>
+  </div>
+</footer>
+
+<script type="module" src="maliyet-motoru.js"></script>
+<script>
+  document.getElementById('burger')?.addEventListener('click', () => {
+    document.getElementById('menu')?.classList.toggle('acik');
+  });
+</script>
+</body>
+</html>

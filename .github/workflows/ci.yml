@@ -1,0 +1,169 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  NODE_VERSION: '20.x'
+
+jobs:
+  test-and-build:
+    name: Test & Build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      # --- Checkout ---
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # --- Node.js Setup ---
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      # --- Cache node_modules (not needed for this project, but kept for future) ---
+      # - name: Cache node_modules
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
+
+      # --- Install dependencies (if package-lock.json exists) ---
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            echo "No package-lock.json, skipping npm ci"
+          fi
+
+      # --- Lint / Syntax Check ---
+      - name: Syntax check (JavaScript/JSON)
+        run: |
+          echo "Checking JavaScript syntax..."
+          find . -name "*.mjs" -o -name "*.js" | grep -v node_modules | xargs -r node --check
+          
+          echo "Checking JSON syntax..."
+          find . -name "*.json" | grep -v node_modules | xargs -r node -e "
+            const fs = require('fs');
+            process.argv.slice(1).forEach(f => {
+              try { JSON.parse(fs.readFileSync(f, 'utf8')); }
+              catch (e) { console.error('Invalid JSON:', f, e.message); process.exit(1); }
+            });
+          "
+
+      # --- Run Tests ---
+      - name: Run test suite
+        run: npm test
+        env:
+          CI: true
+
+      # --- Build ---
+      - name: Build project
+        run: npm run build
+
+      # --- Verify Build Output ---
+      - name: Verify build output
+        run: |
+          echo "Checking build output..."
+          test -f web/fiyat_kitabi.json && echo "  ✓ fiyat_kitabi.json" || (echo "  ✗ fiyat_kitabi.json missing" && exit 1)
+          test -f web/normlar.json && echo "  ✓ normlar.json" || (echo "  ✗ normlar.json missing" && exit 1)
+          test -f web/maliyet-motoru.js && echo "  ✓ maliyet-motoru.js" || (echo "  ✗ maliyet-motoru.js missing" && exit 1)
+          test -f web/maliyet-motoru.html && echo "  ✓ maliyet-motoru.html" || (echo "  ✗ maliyet-motoru.html missing" && exit 1)
+          test -f web/assets/css/atlasgrid.css && echo "  ✓ atlasgrid.css" || (echo "  ✗ atlasgrid.css missing" && exit 1)
+          echo "All build artifacts present ✓"
+
+      # --- Verify Data Integrity ---
+      - name: Verify data integrity
+        run: |
+          node -e "
+            const fs = require('fs');
+            const kitap = JSON.parse(fs.readFileSync('data/fiyat_kitabi.json', 'utf8'));
+            const normlar = JSON.parse(fs.readFileSync('data/normlar.json', 'utf8'));
+            
+            // Temel kontroller
+            if (!kitap.kalemler || Object.keys(kitap.kalemler).length < 2000) {
+              console.error('✗ Kalem sayısı beklenenden az:', Object.keys(kitap.kalemler || {}).length);
+              process.exit(1);
+            }
+            if (!normlar.iscilik || !normlar.iscilik.genelEkOran) {
+              console.error('✗ normlar.json eksik');
+              process.exit(1);
+            }
+            if (!normlar.iscilik.tipBazliEkOran || !normlar.iscilik.tipBazliEkOran['hucre-montaj']) {
+              console.error('✗ Ölçümlü oranlar eksik');
+              process.exit(1);
+            }
+            
+            console.log('✓ Veri bütünlüğü doğrulandı');
+            console.log('  Kalem sayısı:', Object.keys(kitap.kalemler).length);
+            console.log('  Genel ek oran:', normlar.iscilik.genelEkOran);
+            console.log('  Ölçümlü oran sayısı:', Object.keys(normlar.iscilik.tipBazliEkOran).filter(k => !k.startsWith('_')).length);
+          "
+
+  # --- Optional: Code Quality (future) ---
+  # lint:
+  #   name: Lint
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-node@v4
+  #       with: { node-version: '20.x' }
+  #     - run: npx eslint . --ext .mjs,.js
+  #     - run: npx prettier --check .
+
+  # --- Optional: Security Audit ---
+  # audit:
+  #   name: Security Audit
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - uses: actions/setup-node@v4
+  #       with: { node-version: '20.x' }
+  #     - run: npm audit --audit-level=high || true
+
+  # --- Release (manual trigger) ---
+  release:
+    name: Create Release
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: test-and-build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+      
+      - name: Generate version tag
+        id: version
+        run: |
+          VERSION=$(node -e "console.log(require('./package.json').version)")
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "tag=v$VERSION" >> $GITHUB_OUTPUT
+      
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/heads/main')
+        with:
+          tag_name: ${{ steps.version.outputs.tag }}
+          name: Release ${{ steps.version.outputs.version }}
+          generate_release_notes: true
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

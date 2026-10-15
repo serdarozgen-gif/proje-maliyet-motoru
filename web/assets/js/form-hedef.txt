@@ -1,0 +1,37 @@
+KURULU DURUM: Formspree adresi GIRILMEMIS. Bu dosya su an bos birakilmis bir
+gosterge degil, gercek bir ayar dosyasidir.
+
+NE YAPIYOR
+----------
+site/tools/site_uret.py bu dosyayi okur:
+
+  1) Icinde "https://formspree.io/f/xxxxxxxx" biciminde GERCEK bir adres varsa
+     form o adrese POST edilir.
+  2) Yoksa form dogrudan
+        mailto:serdar.ozgen@atlasgrid.com.tr
+     adresine gider. Yani form bugun calisir durumdadir; ziyaretcinin e-posta
+     uygulamasi acilir ve talep bize ulasir.
+
+FORMSPREE ADRESI EKLEMEK
+------------------------
+Kendi formspree.io hesabinizi olusturun, yeni bir form acin ve asagidaki
+satiri ekleyin. site_uret.py tekrar calistirilinca form otomatik olarak
+o adrese gecer, mailto'ya donmez. Kodda degisiklik gerekmez.
+
+    https://formspree.io/f/xxxxxxxx
+
+FORMSPREE YARIYLA ILISKILI KVKK METNI
+--------------------------------------
+Adres girildiginde site_uret.py kendiliginden iki yeri degistirir:
+  - "Aktarim" paragrafi Formspree yurt disi aktarimini belirtir
+  - riza kutusu "ucuncu taraf form hizmeti saglayicisina aktarilmasini onayliyorum"
+    der
+Adres girilmedikce bu iki metin "ucuncu taraf kullanilmaz" haline gelir.
+
+NEDEN FORMSPREE ZORUNLU DEGIL
+------------------------------
+mailto: yaklasiminin tek zayifligi ziyaretcinin e-posta uygulamasi
+yapilandirilmamis olabilir; bu durumda sayfadaki telefon ve e-posta
+baglantilari ise yarar. Formspree ise harici bir saglayicidir ve KVKK
+kapsaminda "ucuncu taraf" yurutu getirir. Gunun sonunda ikisinin de
+trade-off'u var; bu dosya kararin degistirilebilir oldugunu gosterir.

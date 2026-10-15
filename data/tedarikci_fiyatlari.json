@@ -1,0 +1,234 @@
+{
+  "_aciklama": "Tedarikci listelerinden hesaplanan NET birim fiyatlari. Motor bunlari BFK bedeli yerine kullanir. Trafo = ASTOR listesi USD -> TL -> iskonto. Kablo = Oznur listesi TL/km -> TL/m -> iskonto. Donanim (hucre vb.) = ASTOR USD.",
+  "surum": "0.1.0",
+  "guncelleme": "2026-10-06",
+  "dovizKuru": {
+    "USD": 48.93,
+    "tarih": "2026-09-30",
+    "kaynak": "TCMB gösterge kuru USD alış 48,9303 (30.09.2026). Serbest piyasa ~48,76-49,17 aralığında.",
+    "_etki": "Trafo bedellerinin TAMAMI bu kura bagli. 100 kVA'da 1 TL kur degisimi 345 TL maliyet degistirir (11.500 USD x %30). Siparis oncesi guncelle."
+  },
+
+  "trafo": {
+    "_kaynak": "ASTOR-TRAFO-FIYAT-LISTESI-05.11.2024.pdf (05.11.2024). Hermetik tip 28,5-36/0,4 kV. Listede USD.",
+    "_not": "Liste 05.11.2024 tarihli. Kullanici teyit etti: guncel.",
+    "iskonto": 0.70,
+    "_iskontoKaynak": "KULLANICI TARAFINDAN VERILDI (2026-10-06): 'ASTOR listesinden %70 iskonto'.",
+    "_listeTarihi": "05.11.2024 (dosya adindaki tarih). Kullanici 2026-10-06'da teyit etti: liste eski gorunuyor ama guncel. O nedenle guncelleme uyarisi kaldirildi.",
+    "aPlus": {
+      "_sartname": "TEDAŞ MLZ 99/032-E (A PLUS)",
+      "list USD": {
+        "50": 8500, "100": 11500, "160": 13000, "250": 16000, "400": 20000,
+        "630": 40000, "800": 50000, "1000": 52000, "1250": 55000, "1600": 65000,
+        "2000": 85000, "2500": 95000
+      }
+    },
+    "aoAk": {
+      "_sartname": "TEDAŞ MLZ 99/032-D (AOAk)",
+      "_not": "A Plus'tan %10 ucuz. Alüminyum sargili secenek.",
+      "list USD": {
+        "50": 7650, "100": 10350, "160": 11700, "250": 14400, "400": 18000,
+        "630": 36000, "800": 42500, "1000": 44200, "1250": 46750, "1600": 55250,
+        "2000": 72250, "2500": 80750
+      }
+    }
+  },
+
+  "kablo": {
+    "_kaynak": "Oznur_fiyat-listesi-Haziran-2026.pdf (Haziran 2026). Birim: TL/km. Fiyatlar KDV hariç.",
+    "iskonto": 0.65,
+    "_iskontoKaynak": "KULLANICI TARAFINDAN VERILDI (2026-10-06): 'Oznur listesinden %65 iskonto'.",
+    "_donusum": "TL/km -> TL/m: 1000'e bolunur. Motor m cinsinden calisir.",
+
+    "AG_NA2XY": {
+      "_tip": "YAXV (NA2XY) 0,6/1 kV — alüminyum iletkenli. Değerler TL/km.",
+      "_pozUyum": "85.800.24xx-30xx (büyük kesitli AG) ile karsilastirilir",
+      "_donusumNotu": "Asagida TL/km olarak YAZILDI. Uretici 1000'e boler.",
+      "tek": {
+        "16": 53150, "25": 78630, "35": 100530, "50": 129900, "70": 175380,
+        "95": 233830, "120": 285390, "150": 350270, "185": 434840, "240": 549150,
+        "300": 682620, "400": 870900
+      },
+      "iki": {
+        "16": 137050, "25": 201650, "35": 497360
+      },
+      "dort": {
+        "16": 207610, "25": 310000, "35": 398580, "50": 531430, "70": 735150,
+        "95": 983150, "120": 1223000, "150": 1515000, "185": 1878000,
+        "240": 2395000, "300": 2974000, "400": 3080000
+      },
+      "bes": {
+        "16": 260010, "25": 384280, "35": 497360
+      }
+    },
+
+    "AG_N2XY": {
+      "_tip": "YXV (N2XY) 0,6/1 kV — NYA tipi. Listede TL/km.",
+      "_pozUyum": "85.800.12xx (500 V NVV/NYM) ile karsilastirilir",
+      "_donusumNotu": "Asagida TL/km olarak YAZILDI. Uretici 1000'e boler.",
+      "tek": { "16": 137050, "25": 201650, "35": 324000, "50": 543600, "70": 819000 },
+      "iki": { "1.5": 129600, "2.5": 176400, "4": 241200, "6": 324000, "10": 543600, "16": 819000 },
+      "uc": { "1.5": 162000, "2.5": 223200, "4": 313200, "6": 432000, "10": 729000 },
+      "dort": { "10": 918000, "16": 1386000 }
+    },
+
+    "AG_N2RY": {
+      "_tip": "YXZ2V (N2XRY) 0,6/1 kV — zırhlı. TL/km.",
+      "tek": { "16": 137050, "25": 201650, "35": 324000, "50": 543600, "70": 819000 },
+      "iki": { "1.5": 129600, "2.5": 176400, "4": 241200, "6": 324000, "10": 543600, "16": 819000 },
+      "uc": { "1.5": 162000, "2.5": 223200, "4": 313200, "6": 432000, "10": 729000 },
+      "dort": { "10": 918000, "16": 1386000 }
+    },
+
+    "OG_A2XSY": {
+      "_tip": "YAXC7V-R (A2XSY) — alüminyum, bakir ekranli. Motorun OG kablosu.",
+      "_pozUyum": "85.830.20xx / 85.830.21xx (3 çekirdekli) ve tek çekirdekli",
+      "tek_8_7_15": {
+        "35": 759780, "50": 786770, "70": 876300, "95": 927800, "120": 1015000,
+        "150": 1275000, "185": 1407000, "240": 1579000, "300": 1619000,
+        "400": 2046000, "500": 2438000, "630": 2853000
+      },
+      "tek_20_3_35": {
+        "35": 982860, "50": 1011000, "70": 1111000, "95": 1158000, "120": 1254000,
+        "150": 1535000, "185": 1682000, "240": 1870000, "300": 2086000,
+        "400": 2560000, "500": 3018000, "630": 3501000
+      },
+      "A2XSH": {
+      "_tip": "YAXC7Z1-R (NA2XSH) — halojensiz dış kılıflı tek damarlı, XLPE, bakır ekranlı",
+      "_kaynak": "Belge sayfa 61 / PDF sayfa 32",
+      "tek_20_3_35": {
+        "35": 940920, "50": 966640, "70": 1065000, "95": 1111000, "120": 1203000,
+        "150": 1485000, "185": 1628000, "240": 1811000, "300": 2025000,
+        "400": 2498000, "500": 2949000, "630": 3422000
+      }
+    },
+    "A2XSEYFGbY": {
+      "_tip": "YAXC8VZ3V-R (A2XSEYFGbY) — XLPE izoleli, zırhlı, 3 damarlı",
+      "_kaynak": "Belge sayfa 60 / PDF sayfa 32",
+      "uc_20_3_35": {
+        "35": 3653000, "50": 3824000, "70": 4262000, "95": 4502000, "120": 4912000,
+        "150": 5039000, "185": 5642000, "240": 6546000, "300": 6991000
+      }
+    },
+    "_motorNotu": "Motorun poz sistemi belirtmez. Uretici 8,7/15 kV serisini kullanir (6/10 ve 8,7/15 arasindaki fark %4-8). Daha kesin olmasi icin motorun ogSistem girdisi fiyat secimine baglanmali — yapilmadi."
+    },
+
+    "OG_2XSY": {
+      "_tip": "YXC7V-R (2XSY) — bakir iletkenli",
+      "tek_20_3_35": { "35": 1518000 },
+      "_kapsam": "Yalnizca bir kalem bulundu; motorun 3 cekirdekli bakir kablolari icin tam seri yok."
+    },
+
+    "OG_N2XSH": {
+      "_tip": "YXC7Z1-R (N2XSH) 20,3/35 kV",
+      "tek_20_3_35": { "35": 1526000 },
+      "_kapsam": "Tek kalem."
+    }
+  },
+
+  "hucre": {
+    "_kaynak": "2.-Astor-Hucre.pdf (27.01.2025). Metal mahfazali moduler hücreler. Liste fiyati USD.",
+    "iskonto": 0.70,
+    "_iskontoKaynak": "ASTOR ile ayni oran kullanildi (%70). Hucre aliminda oran farkli olabilir.",
+    "_pozesleme": "BF 85.500 ve 85.510 pozlarıyla eslesir. Motorun mevcut kapsaminda olan `85.530.240x` (sigorta grubu) yerine bu hücre pozları kapsamda olacak.",
+    "girisCikisYukAyiricili": 5900.00,
+    "girisCikisKesicili": 12600.00,
+    "trafoKorumaKesicili": 13650.00,
+    "trafoKorumaYukAyiriciliSigortali": 6650.00,
+    "gerilimTransformatoruHucresi": 10050.00,
+    "iciIhtiyacHucresi": 12400.00,
+    "kabloBaglantiHucresi": 2750.00,
+    "barYUkseltme": 2750.00,
+    "akimOlcumHucresi": 4950.00,
+    "parafudr": 1450.00,
+    "akuRedresor": 1750.00,
+    "_parafudrKaynak": "2. sayfa opsiyonel donanimlar: 7,2-36kV 10kA parafudr SET 1 1.450,00 USD."
+  },
+
+  "_astorHucreRMU": {
+    "_not": "ASTOR 'GAZ YALITIMLI HÜCRELER' (RMU) sınıfı — SF6 gaz yalıtımlı birimler. BFK 85.500.12xx (YG SF6 gaz yalıtımlı) ile direkt eşleşir. Trafo bağlantısında yaygın kullanılan sınıf.",
+    "iskonto": 0.70,
+    "pozEsleme": {
+      "AS36 LC RMU": {
+        "fiyat_USD": 15000.00,
+        "bfkPoz": "85.500.1203",
+        "aciklama": "36 kV 630A Yük Ayırıcılı Giriş/çıkış"
+      },
+      "AS36 LF RMU": {
+        "fiyat_USD": 20000.00,
+        "bfkPoz": "85.500.1207",
+        "aciklama": "36 kV 630A Sigortalı Yük Ayırıcılı Trafo Koruma"
+      },
+      "AS36 CBC RMU": {
+        "fiyat_USD": 31000.00,
+        "bfkPoz": "85.500.1211",
+        "aciklama": "36 kV 630A Kesicili Giriş-Çıkış / Trafo Koruma"
+      },
+      "AS36 VTC/2 RMU": {
+        "fiyat_USD": 14000.00,
+        "bfkPoz": "85.500.1219",
+        "aciklama": "36 kV 630A Gerilim Transformatörü / İç İhtiyaç"
+      },
+      "AS36 LCV RMU": {
+        "fiyat_USD": 19000.00,
+        "bfkPoz": "85.500.1222",
+        "aciklama": "36 kV 630A Akım Gerilim Ölçü (Mühürlü)"
+      },
+      "AS36 CBC-C RMU": {
+        "fiyat_USD": 45000.00,
+        "bfkPoz": "85.500.1216",
+        "aciklama": "36 kV 1250A Kesicili Bara Bağlama (Kuplaj) — 1250A kullan"
+      },
+      "AS36 LC-Y RMU": {
+        "fiyat_USD": 18000.00,
+        "bfkPoz": "85.500.1215",
+        "aciklama": "36 kV 630A Ayırıcılı Kuplaj"
+      },
+      "AS36 KB RMU": {
+        "fiyat_USD": 6500.00,
+        "bfkPoz": "85.510.2101",
+        "aciklama": "Kablo Bağlama Hücresi"
+      }
+    }
+  },
+
+  "_astorHucreMetal": {
+    "_not": "ASTOR 'METAL MAHFAZALI MODÜLER' — hava yalıtımlı. BFK 85.510.x ile eşleşir. RMU'ya göre daha ucuz.",
+    "iskonto": 0.70,
+    "pozEsleme": {
+      "AS36 LC": {
+        "fiyat_USD": 5900.00,
+        "bfkPoz": "85.510.1102",
+        "aciklama": "36 kV 630A 16kA Yük Ayırıcılı Giriş/Çıkış (Motorlu)"
+      },
+      "AS36 LF": {
+        "fiyat_USD": 6650.00,
+        "bfkPoz": "85.530.2403",
+        "aciklama": "36 kV Sigortalı Yük Ayırıcılı Koruma — BFK'ta 85.530.2403 (36 kV sigorta grubu)"
+      },
+      "AS36 CBC/CBT": {
+        "fiyat_USD": 12600.00,
+        "bfkPoz": "85.510.1102",
+        "aciklama": "36 kV 630A 16kA Kesicili Giriş-Çıkış — açıkçası BF 85.510.1102 kullan (aynı seri)"
+      },
+      "AS36 VTC/3": {
+        "fiyat_USD": 12400.00,
+        "bfkPoz": "85.510.1302",
+        "aciklama": "İç İhtiyaç Hücresi — BF 85.510.1302 (24/36 kV 0,1 kV)"
+      },
+      "AS36 KB": {
+        "fiyat_USD": 2750.00,
+        "bfkPoz": "85.510.2101",
+        "aciklama": "Kablo Giriş Bağlantı Fonksiyonel Birimi/Kutusu"
+      }
+    }
+  },
+
+  "kapsamDisi": {
+    "_aciklama": "Motor bunlari URETMIYOR. Trafo baglanti maliyetinde gercek paylari olabilir.",
+    "kanalKazisi": "BFK 85.890.x — motor kapsam disi birakildi.",
+    "tava": "Oznur 300x50x2 omega tava: el notu 2300, Elsan 2604 TL/ad. Motor kapsam disi.",
+    "sayac": "X5 kombi sayaci: Elsan 3500 TL/ad. Motor kapsam disi.",
+    "not": "Ozcam vakasinda bu kalemler gercek maliyetin belirgin kisimini olusturdu. Motor kapsami genisletilmeden vaka seviyesi karsilastirma gecerli olmaz."
+  }
+}

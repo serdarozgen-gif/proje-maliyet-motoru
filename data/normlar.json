@@ -1,0 +1,86 @@
+{
+  "_aciklama": "Norm ve katsayi dosyasi. Motor sabitleri buradan okur; kodda gomulmez. Her alanin kaynagi ve/veya olcum notu 'kaynak' alaninda yazilidir.",
+  "surum": "0.2.1",
+  "guncelleme": "2026-10-07",
+
+  "malzemeKatsayisi": {
+    "_aciklama": "Yayimlanan malzeme bedeli = BFK malzeme x katsayi. Trafo disi kalemler icin pazarlik payi olarak 1.0 birim fiyatin uzerinde (donanim) ya da altinda (tuketilen malzeme) oldugu icin tek katsayi yeterli degildir. Bu yuzden once varsayilan 1.0, sonra olcum.",
+    "varsayilan": 1.0,
+    "pozbazli": {},
+    "kaynak": "OLCUM YOK. Ozcam 100kVA orneginde tek kalem (bakir bara) BFK malzeme 916.85 / REMA 880 / el 900 -> n=0.96. Trafo 259.260 / 160.580 -> n=0.62. Tek kalemden oran cikarmak yaniltir."
+  },
+
+  "iscilik": {
+    "_aciklama": "Iscilik = BFK montaj x ekOran. ekOran tek sayi degil, kalem tipine gore degisir: kaba is (direk dikimi, kablo cekimi) icin dusuk, hassas is (hucre montaji, trafo baglantisi) icin yuksek.",
+    "genelEkOran": 0.35,
+    "tipBazliEkOran": {
+      "_kablo-montaj": "OLCULDU 1x150/25 AL kablo cekimi: gercek 120 TL/m, BFK montaj 119.08 -> oran 1.01. Ek oran YOK. (data/olcum.json -> Lokal GES)",
+      "_direk-dikimi": "OLCUM YOR. Santrifuj beton direk 30 TL/kg olarak mevcut ama BFK poz karsiligi yok; oran cikarilamaz. 0 gecici.",
+      "_hucre-montaj": "OLCULDU hucre montaj: gercek 22000 TL/ad, BFK montaj 32709 -> oran 0.67. Ek oran -0.33 gerekir. Bu kalem trafo baglantisi motorunun kapsaminda; -0.33 uygulanir.",
+      "_kablo-baglanti": "OLCUM YOK. Pabuc/ek mansonu BFK montaji cok dusuk (38-134 TL). Takim fiyatina gore tartilir. 0.35 gecici.",
+      "_topraklama": "Genel tip artik yalniz karisik duzenler icin (orn. 85.790.1202: kosebent + 5 m orgulu iletken, BFK montaj 2853.96). Bu kalem icin OLCUM YOK; 0.35 gecici.",
+      "_topraklama-kazik": "OLCULDU kazik/elektrot (Ad bazli, 85.790.12xx): gercek 2000 TL/ad, BFK montaj 1208.27 (85.790.1203/1204) -> oran 2000/1208.27 = 1.6555 ~ 1.66. Ek oran +0.66. (data/olcum.json -> Lokal GES)",
+      "_topraklama-serit": "OLCULDU serit/iletken (m bazli, 85.790.11xx): gercek 300 TL/m, BFK montaj 329.14 (85.790.1105/1106) -> oran 300/329.14 = 0.9115 ~ 0.91. Ek oran -0.09. (data/olcum.json -> Lokal GES)",
+      "_pano-montaj": "OLCUM YOK.",
+      "_trafo-montaj": "OLCUM YOK. Trafo baglanti montaji gunluk ekip bedeliyle hesaplanir; BFK montaji tek basina yeterli degil.",
+      "kablo-montaj": 0.0,
+      "direk-dikimi": 0.0,
+      "hucre-montaj": -0.33,
+      "kablo-baglanti": 0.35,
+      "topraklama": 0.35,
+      "topraklama-kazik": 0.66,
+      "topraklama-serit": -0.09,
+      "pano-montaj": 0.35,
+      "trafo-montaj": 0.35,
+      "vara": 0.0,
+      "varsayilan": 0.35
+    },
+    "kaynak": "OLCUM KISMI. Lokal GES taseronu (data/olcum.json): hucre montaj 22000 TL/ad vs BFK 32709 -> n=0.67 (ek oran -0.33). Kablo cekimi 120 TL/m vs BFK 119.08 -> n=1.01 (ek oran 0). Topraklama kazigi 2000 vs BFK 1208 -> 1.66; serit 300 vs BFK 329 -> 0.91. Dagilim 16.3x oldugu icin tek oran kullanilamaz."
+  },
+
+  "iskontoOranlari": {
+    "_aciklama": "Bayi listesinden guncel net almaya kadar indirim. Poz bazinda tanimlanir.",
+    "varsayilan": 0.65,
+    "pozbazli": {
+      "85.610": 0.62,
+      "85.630": 0.62,
+      "85.203": 0.96
+    },
+    "kaynak": "OLCUM KISMI. Trafo 259.260 BFK / 160.580 REMA = 0.62 (Ozcam 100kVA gerceklesen). Bakir bara 916.85 / 880 REMA = 0.96. Kablo (KABLO_OZNUR sayfasi): 1x150 AL YXC7V liste 1535 / net 537 -> 0.35 iskontoda net 537; BFK 432.31."
+  },
+
+  "kapsamCarpanlari": {
+    "_aciklama": "Kapsama dahil edilen ek kalemlerin carpanlari.",
+    "platform": 1.0,
+    "topraklama": 1.0,
+    "kanal": 1.0,
+    "pabucPerGuzergah": 6,
+    "ekMansonKabasalOran": 0.02,
+    "kaynak": "ekMansonKabasalOran kaba kural: 50 m'lik güzergah basina yaklasik 1 birlestirme yeri varsayimi. OLCUM YOK."
+  },
+
+  "tanimTablosu": {
+    "_aciklama": "Poz eşleme tabloları. Motor bunlari koda gomulmeden buradan alir.",
+    "busingKapagi": [
+      { "enFazla": 160, "poz": "85.230.1101" },
+      { "enFazla": 400, "poz": "85.230.1102" },
+      { "enFazla": 800, "poz": "85.230.1103" },
+      { "enFazla": 2000, "poz": "85.230.1104" }
+    ],
+    "agPano": [
+      { "enFazla": 50, "poz": "85.720.1301" },
+      { "enFazla": 100, "poz": "85.720.1302" },
+      { "enFazla": 160, "poz": "85.720.1303" },
+      { "enFazla": 250, "poz": "85.720.1304" },
+      { "enFazla": 400, "poz": "85.720.1305" }
+    ],
+    "ogSigorta": [
+      { "sistemler": ["6,3", "10,5"], "poz": "85.530.2401" },
+      { "sistemler": ["36"], "poz": "85.530.2403" }
+    ],
+    "platform": [
+      { "enFazla": 400, "poz": "85.105.2301" },
+      { "enFazla": 99999, "poz": "85.105.2302" }
+    ]
+  }
+}
