@@ -276,7 +276,7 @@ ok('normlar sürümü sonuç notunda', sonucNotu.includes(`normlar v${normlar.su
 ok('kalem tipi bazlı oranlar gösterildi', /kablo-montaj/.test(sonucNotu), sonucNotu);
 const iscOran = Number((sonucNotu.match(/İşçilik payı %([\d.]+)/) ?? [])[1]);
 ok('işçilik payı makul kaldı', iscOran > 3 && iscOran < 45, `%${iscOran}`);
-ok('hucre-montaj negatif oran uygulandı', /hucre-montaj %-33/.test(sonucNotu), sonucNotu);
+ok('hucre-montaj negatif oran uygulandı', /hucre-montaj %-16/.test(sonucNotu), sonucNotu);
 
 console.log('\n--- 7. Yayın uyarısı ---');
 const uyariEl = eleman('uyari');

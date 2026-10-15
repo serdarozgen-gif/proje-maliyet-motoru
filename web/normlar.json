@@ -1,7 +1,7 @@
 {
   "_aciklama": "Norm ve katsayi dosyasi. Motor sabitleri buradan okur; kodda gomulmez. Her alanin kaynagi ve/veya olcum notu 'kaynak' alaninda yazilidir.",
-  "surum": "0.2.1",
-  "guncelleme": "2026-10-07",
+  "surum": "0.3.0",
+  "guncelleme": "2026-10-15",
 
   "malzemeKatsayisi": {
     "_aciklama": "Yayimlanan malzeme bedeli = BFK malzeme x katsayi. Trafo disi kalemler icin pazarlik payi olarak 1.0 birim fiyatin uzerinde (donanim) ya da altinda (tuketilen malzeme) oldugu icin tek katsayi yeterli degildir. Bu yuzden once varsayilan 1.0, sonra olcum.",
@@ -14,28 +14,28 @@
     "_aciklama": "Iscilik = BFK montaj x ekOran. ekOran tek sayi degil, kalem tipine gore degisir: kaba is (direk dikimi, kablo cekimi) icin dusuk, hassas is (hucre montaji, trafo baglantisi) icin yuksek.",
     "genelEkOran": 0.35,
     "tipBazliEkOran": {
-      "_kablo-montaj": "OLCULDU 1x150/25 AL kablo cekimi: gercek 120 TL/m, BFK montaj 119.08 -> oran 1.01. Ek oran YOK. (data/olcum.json -> Lokal GES)",
-      "_direk-dikimi": "OLCUM YOR. Santrifuj beton direk 30 TL/kg olarak mevcut ama BFK poz karsiligi yok; oran cikarilamaz. 0 gecici.",
-      "_hucre-montaj": "OLCULDU hucre montaj: gercek 22000 TL/ad, BFK montaj 32709 -> oran 0.67. Ek oran -0.33 gerekir. Bu kalem trafo baglantisi motorunun kapsaminda; -0.33 uygulanir.",
+      "_kablo-montaj": "OLCULDU (2026-10-15, 9 proje): gercek 100 TL/m, BFK montaj 119.08 TL/m -> oran 100/119.08 = 0.84. Ek oran -0.16. Onceden 0 idi (Lokal GES 120 TL/m olcumu). 9 projede tutarli sekilde 100 TL/m uygulanmis.",
+      "_direk-dikimi": "OLCUM YENI. 9 proje: beton direk 10 TL/kg, galvizli demir direk 60 TL/kg (baglanti barasi dahil). BFK kg basina montaji bilinmediginden oran cikarilamaz. Doğrudan birim fiyat yaklasimi eklenene kadar 0.",
+      "_hucre-montaj": "OLCULDU (2026-10-15, 9 proje): Toparlar, Vaultr, Ayhanlar GES (3 proje, hava yalitimli). Gercek 20.000-35.000 TL/adet, ortalama 27.500 TL/adet. BFK montaj 32.709 TL/ad -> oran 27.500/32.709 = 0.84. Ek oran -0.16. Onceden -0.33 idi (Lokal GES 22.000 TL tek olcumu).",
       "_kablo-baglanti": "OLCUM YOK. Pabuc/ek mansonu BFK montaji cok dusuk (38-134 TL). Takim fiyatina gore tartilir. 0.35 gecici.",
       "_topraklama": "Genel tip artik yalniz karisik duzenler icin (orn. 85.790.1202: kosebent + 5 m orgulu iletken, BFK montaj 2853.96). Bu kalem icin OLCUM YOK; 0.35 gecici.",
-      "_topraklama-kazik": "OLCULDU kazik/elektrot (Ad bazli, 85.790.12xx): gercek 2000 TL/ad, BFK montaj 1208.27 (85.790.1203/1204) -> oran 2000/1208.27 = 1.6555 ~ 1.66. Ek oran +0.66. (data/olcum.json -> Lokal GES)",
-      "_topraklama-serit": "OLCULDU serit/iletken (m bazli, 85.790.11xx): gercek 300 TL/m, BFK montaj 329.14 (85.790.1105/1106) -> oran 300/329.14 = 0.9115 ~ 0.91. Ek oran -0.09. (data/olcum.json -> Lokal GES)",
+      "_topraklama-kazik": "OLCULDU (2026-10-15, 9 proje): tum direk/monoblok/trafo projelerinde kazik kullanilir. Gercek 2.000 TL/adet, BFK montaj 1.208 TL/ad -> oran 2.000/1.208 = 1.66. Ek oran +0.66. Onaylandi.",
+      "_topraklama-serit": "OLCULDU (2026-10-15, 9 proje): monoblok projelerinde serit kullanilir. Gercek 100 TL/m, BFK montaj 329.14 TL/m -> oran 100/329.14 = 0.30. Ek oran -0.70. Onceden -0.09 idi (Lokal GES 300 TL/m olcumu). 9 projede 100 TL/m tutarli.",
       "_pano-montaj": "OLCUM YOK.",
-      "_trafo-montaj": "OLCUM YOK. Trafo baglanti montaji gunluk ekip bedeliyle hesaplanir; BFK montaji tek basina yeterli degil.",
-      "kablo-montaj": 0.0,
+      "_trafo-montaj": "OLCULDU (2026-10-15, 9 proje): ortalama 50.000 TL/adet. BFK montaj 36.822 TL/ad -> oran 50.000/36.822 = 1.36. Ek oran +0.36. Onceden 0.35 (genel varsayilan) idi.",
+      "kablo-montaj": -0.16,
       "direk-dikimi": 0.0,
-      "hucre-montaj": -0.33,
+      "hucre-montaj": -0.16,
       "kablo-baglanti": 0.35,
       "topraklama": 0.35,
       "topraklama-kazik": 0.66,
-      "topraklama-serit": -0.09,
+      "topraklama-serit": -0.70,
       "pano-montaj": 0.35,
-      "trafo-montaj": 0.35,
+      "trafo-montaj": 0.36,
       "vara": 0.0,
       "varsayilan": 0.35
     },
-    "kaynak": "OLCUM KISMI. Lokal GES taseronu (data/olcum.json): hucre montaj 22000 TL/ad vs BFK 32709 -> n=0.67 (ek oran -0.33). Kablo cekimi 120 TL/m vs BFK 119.08 -> n=1.01 (ek oran 0). Topraklama kazigi 2000 vs BFK 1208 -> 1.66; serit 300 vs BFK 329 -> 0.91. Dagilim 16.3x oldugu icin tek oran kullanilamaz."
+    "kaynak": "OLCUM KISMI (2026-10-15 guncellemesi, 9 proje): hucre montaj 3 proje (Toparlar/Vaultr/Ayhanlar GES) 20.000-35.000 TL/ad vs BFK 32.709 -> -0.16. Kablo cekimi 9 proje 100 TL/m vs BFK 119.08 -> -0.16. Topraklama kazigi 9 proje 2.000 TL/ad vs BFK 1.208 -> +0.66. Topraklama serit monoblok projelerde 100 TL/m vs BFK 329.14 -> -0.70. Trafo montaj 9 proje 50.000 TL/ad vs BFK 36.822 -> +0.36. Direk dikimi: beton 10 TL/kg, demir 60 TL/kg (baglanti barasi dahil) — BFK karsiligi olmadan oran cikarilamaz. Calisma anlami: motor yaklasik maliyet icindir, kesin teklif metraj+son fiyat listesiyle yapilir."
   },
 
   "iskontoOranlari": {

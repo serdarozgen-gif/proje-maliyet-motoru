@@ -287,7 +287,7 @@ console.log('\n=== 9b. Topraklama alt tipleri (kazık / şerit) ===');
   ok('kazık tipi topraklama-kazik', kSatir?.tip === 'topraklama-kazik', kSatir?.tip);
   ok('kazık ek oran +0.66 (ölçülen 1.66)', kSatir?.ekOran === 0.66, String(kSatir?.ekOran));
   ok('şerit tipi topraklama-serit', sSatir?.tip === 'topraklama-serit', sSatir?.tip);
-  ok('şerit ek oran -0.09 (ölçülen 0.91)', sSatir?.ekOran === -0.09, String(sSatir?.ekOran));
+  ok('şerit ek oran -0.70 (ölçülen 0.30)', sSatir?.ekOran === -0.7, String(sSatir?.ekOran));
 }
 
 // ===================================================================
